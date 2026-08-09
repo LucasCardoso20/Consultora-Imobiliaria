@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marilda Souza • Real Estate Consultant</title>
+
+    <!-- Tailwind (CDN for quick prototyping) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Removendo cores Tailwind hardcoded para usar variáveis CSS
+            },
+            boxShadow: {
+              // Removendo sombra Tailwind hardcoded para usar variáveis CSS
+            },
+            borderRadius: {
+              // Removendo radii Tailwind hardcoded para usar variáveis CSS
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Playfair Display', 'serif'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        /* Design Tokens */
+        --color-brand-primary: #B08B5A;
+        --color-brand-secondary: #A33B3B;
+        --color-background: #F8F8F8;
+        --color-surface: #FFFFFF;
+        --color-text-primary: #333333;
+        --color-text-muted: #666666;
+        --color-border: #E0E0E0;
+        --color-accent: #F0F0F0;
+        --color-success: #4CAF50;
+        --color-warning: #FFC107;
+
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 24px;
+        --radius-xl: 36px;
+
+        --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      body {
+        font-family: 'Inter', sans-serif; /* Define a fonte padrão para o corpo */
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif; /* Define a fonte para os títulos */
+      }
+    </style>
+  </head>
+
+  <body class="bg-[var(--color-background)] text-[var(--color-text-primary)]">
+    <!-- Subtle background glow -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div
+        class="absolute left-1/2 top-[-140px] h-[520px] w-[980px] -translate-x-1/2 rounded-full bg-gradient-to-b from-[var(--color-accent)] to-[var(--color-background)] blur-3xl"
+      ></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-surface)]/80 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <!-- Brand -->
+        <a href="#" class="inline-flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-[var(--radius-md)] bg-[var(--color-text-primary)] text-[var(--color-surface)]">
+            <span class="text-sm font-semibold tracking-wide">MS</span>
+          </span>
+          <div class="leading-tight">
+            <div class="text-sm font-semibold tracking-tight">Marilda Souza</div>
+            <div class="text-xs text-[var(--color-text-muted)]">Real Estate Consultant</div>
+          </div>
+        </a>
+
+        <!-- Nav (desktop) -->
+        <nav class="hidden items-center gap-8 md:flex">
+          <a href="#services" class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]">Services</a>
+          <a href="#listings" class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]">Listings</a>
+          <a href="#about" class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]">About</a>
+          <a href="#contact" class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]">Contact</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-3">
+          <a
+            href="#contact"
+            class="hidden rounded-[var(--radius-md)] border border-[var(--color-border)] px-4 py-2 text-sm font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-accent)] md:inline-flex"
+          >
+            Book a call
+          </a>
+
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-brand-secondary)] px-4 py-2 text-sm font-semibold text-white shadow-[var(--shadow-soft)] hover:bg-[#8B2F2F]"
+          >
+            WhatsApp
+          </a>
+
+          <!-- Mobile menu button (visual placeholder) -->
+          <button
+            type="button"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-text-primary)] hover:bg-[var(--color-accent)] md:hidden"
+            aria-label="Open menu"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO (single column, centered text, image below) -->
+    <main>
+      <section class="relative">
+        <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <!-- Text block -->
+          <div class="mx-auto max-w-2xl text-center">
+            <div
+              class="inline-flex items-center gap-2 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1 text-xs text-[var(--color-text-muted)]"
+            >
+              <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-text-primary)]"></span>
+              Curated listings • Strategic negotiation • White-glove support
+            </div>
+
+            <h1 class="font-display mt-6 text-balance text-5xl font-semibold tracking-tight sm:text-6xl">
+              Marilda Souza
+            </h1>
+
+            <p class="mt-4 text-pretty text-base leading-relaxed text-[var(--color-text-muted)] sm:text-lg">
+              A modern, elegant real estate experience—guiding buyers and sellers with clarity, discretion, and confidence
+              from first visit to final signature.
+            </p>
+
+            <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a
+                href="#listings"
+                class="inline-flex items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-brand-secondary)] px-6 py-3 text-sm font-semibold text-white shadow-[var(--shadow-soft)] hover:bg-[#8B2F2F]"
+              >
+                View featured listings
+              </a>
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] px-6 py-3 text-sm font-semibold text-[var(--color-text-primary)] hover:bg-[var(--color-accent)]"
+              >
+                Get a property valuation
+              </a>
+            </div>
+
+            <div class="mt-6 text-xs text-[var(--color-text-muted)]">
+              Fast response • Confidential process • Premium presentation
+            </div>
+          </div>
+
+          <!-- Featured image below -->
+          <div class="mt-10 sm:mt-12">
+            <div class="relative mx-auto max-w-4xl">
+              <!-- Decorative frame -->
+              <div class="absolute -inset-4 -z-10 rounded-[var(--radius-xl)] bg-gradient-to-b from-[var(--color-accent)] to-[var(--color-background)]"></div>
+
+              <figure class="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)]">
+                <!-- Replace with Marilda's real photo when available -->
+                <img
+                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=2000&q=80"
+                  alt="Marilda Souza, real estate consultant (featured portrait)"
+                  class="h-[420px] w-full object-cover sm:h-[520px]"
+                  loading="eager"
+                />
+
+                <!-- Minimal overlay caption -->
+                <figcaption class="relative">
+                  <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[var(--color-text-primary)]/65 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
+                    <div class="flex flex-wrap items-end justify-between gap-4">
+                      <div class="leading-tight">
+                        <div class="text-sm font-semibold text-white">Marilda Souza</div>
+                        <div class="text-xs text-white/80">Real Estate Consultant • Premium service</div>
+                      </div>
+                      <div
+                        class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur"
+                        aria-label="Availability status"
+                      >
+                        <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-success)]"></span>
+                        Available today
+                      </div>
+                    </div>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <!-- Optional micro-trust row (kept minimal) -->
+              <div class="mx-auto mt-6 grid max-w-4xl grid-cols-1 gap-3 sm:grid-cols-3">
+                <div class="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5 text-center">
+                  <div class="text-sm font-semibold text-[var(--color-text-primary)]">Buy</div>
+                  <div class="mt-1 text-xs text-[var(--color-text-muted)]">Shortlist + efficient viewings</div>
+                </div>
+                <div class="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5 text-center">
+                  <div class="text-sm font-semibold text-[var(--color-text-primary)]">Sell</div>
+                  <div class="mt-1 text-xs text-[var(--color-text-muted)]">Pricing + premium presentation</div>
+                </div>
+                <div class="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5 text-center">
+                  <div class="text-sm font-semibold text-[var(--color-text-primary)]">Negotiate</div>
+                  <div class="mt-1 text-xs text-[var(--color-text-muted)]">Strategy with discretion</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="mx-auto mt-12 max-w-7xl">
+            <div class="h-px w-full bg-[var(--color-border)]"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PROPERTIES (Carousel) -->
+<section id="featured-properties" class="bg-[var(--color-background)]">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+    <!-- Section header -->
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p class="text-xs font-semibold tracking-[0.18em] text-[var(--color-text-muted)]">
+          FEATURED PROPERTIES
+        </p>
+        <h2 class="font-display mt-2 text-2xl font-semibold tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
+          Handpicked listings
+        </h2>
+        <p class="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--color-text-muted)]">
+          A curated selection with strong photos, great location, and pricing clarity.
+        </p>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex items-center gap-2">
+        <button
+          type="button"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-text-primary)] hover:bg-[var(--color-accent)]"
+          aria-label="Previous properties"
+          data-carousel-prev
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <button
+          type="button"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-text-primary)] hover:bg-[var(--color-accent)]"
+          aria-label="Next properties"
+          data-carousel-next
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="relative mt-10">
+      <div
+        data-carousel
+        class="flex gap-5 overflow-x-auto scroll-smooth pb-2 [-ms-overflow-style:none] [scrollbar-width:none]"
+        style="scroll-snap-type: x mandatory;"
+      >
+        <!-- Hide scrollbar (webkit) -->
+        <style>
+          [data-carousel]::-webkit-scrollbar { display: none; }
+        </style>
+
+        <!-- Card 1 -->
+        <article
+          class="group min-w-[82%] snap-start sm:min-w-[52%] lg:min-w-[34%]"
+          style="scroll-snap-align:start;"
+        >
+          <a href="#" class="block overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)]">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1600&q=80"
+                alt="Modern house with garden"
+                class="h-64 w-full object-cover sm:h-72"
+                loading="lazy"
+              />
+              <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[var(--color-text-primary)]/65 to-transparent"></div>
+
+              <div class="absolute left-4 top-4 flex gap-2">
+                <span class="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[var(--color-text-primary)] backdrop-blur">For sale</span>
+                <span class="rounded-full bg-[var(--color-text-primary)]/85 px-3 py-1 text-xs font-semibold text-white backdrop-blur">New</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-5">
+                <div class="flex items-end justify-between gap-4">
+                  <div>
+                    <p class="text-sm font-semibold text-white">Jardins • São Paulo</p>
+                    <p class="text-xs text-white/80">Townhouse • 3 bed • 2 bath</p>
+                  </div>
+                  <p class="text-sm font-semibold text-white">R$ 2.450.000</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-5">
+              <h3 class="text-base font-semibold text-[var(--color-text-primary)] group-hover:underline group-hover:underline-offset-4">
+                Light-filled townhouse with private outdoor area
+              </h3>
+
+              <div class="mt-3 flex flex-wrap gap-2 text-xs text-[var(--color-text-muted)]">
+                <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-accent)] px-3 py-1">140 m²</span>
+                <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-accent)] px-3 py-1">2 parking</span>
+                <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-accent)] px-3 py-1">Near parks</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 2 -->
+        <article
+          class="group min-w-[82%] snap-start sm:min-w-[52%] lg:min-w-[34%]"
+          style="scroll-snap-align:start;"
+        >
+          <a href="#" class="block overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)]">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80"
+                alt="Elegant apartment interior"
+                class="h-64 w-full object-cover sm:h-72"
+                loading="lazy"
+              />
+              <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[var(--color-text-primary)]/65 to-transparent"></div>
+
+              <div class="absolute left-4 top-4 flex gap-2">
+                <span class="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[var(--color-text-primary)] backdrop-blur">For sale</span>
+                <span class="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[var(--color-text-primary)] backdrop-blur">Prime</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-5">
+                <div class="flex items-end justify-between gap-4">
+                  <div>
+                    <p class="text-sm font-semibold text-white">Itaim Bibi • São Paulo</p>
+                    <p class="text-xs text-white/80">Apartment • 2 bed • 2 bath</p>
+                  </div>
+                  <p class="text-sm font-semibold text-white">R$ 1.980.000</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-5">
+              <h3 class="text-base font-semibold text-[var(--color-text-primary)] group-hover:underline group-hover:underline-offset-4">
+                Minimal apartment with panoramic city views
+              </h3>
+
+              <div class="mt-3 flex flex-wrap gap-2 text-xs text-[var(--color-text-muted)]">
+                <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-accent)] px-3 py-1">98 m²</span>
+                <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-accent)] px-3 py-1">1 parking</span>
+                <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-accent)] px-3 py-1">Concierge</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 3 -->
+        <article
+          class="group min-w-[82%] snap-start sm:min-w-[52%] lg:min-w-[34%]"
+          style="scroll-snap-align:start;"
+        >
+          <a href="#" class="block overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)]">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"
+                alt="Contemporary house facade"
+                class="h-64 w-full object-cover sm:h-72"
+                loading="lazy"
+              />
+              <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[var(--color-text-primary)]/65 to-transparent"></div>
+
+              <div class="absolute left-4 top-4 flex gap-2">
+                <span class="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[var(--color-text-primary)] backdrop-blur">For sale</span>
+                <span class="rounded-full bg-[var(--color-text-primary)]/85 px-3 py-1 text-xs font-semibold text-white backdrop-blur">Open house</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-5">
+                <div class="flex items-end justify-between gap-4">
+                  <div>
+                    <p class="text-sm font-semibold text-white">Alphaville • Barueri</p>
+                    <p class="text-xs text-white/80">House • 4 bed • 5 bath</p>
+                  </div>
+                  <p class="text-sm font-semibold text-white">R$ 4.900.000</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-5">
+              <h3 class="text-base font-semibold text-[var(--color-text-primary)] group-hover:underline group-hover:underline-offset-4">
+                Contemporary home with pool and gourmet area
+              </h3>
+
+              <div class="mt-3 flex flex-wrap gap-2 text-xs text-[var(--color-text-muted)]">
+                <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-accent)] px-3 py-1">320 m²</span>
+                <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-accent)] px-3 py-1">4 parking</span>
+                <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-accent)] px-3 py-1">Gated community</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 4 -->
+        <article
+          class="group min-w-[82%] snap-start sm:min-w-[52%] lg:min-w-[34%]"
+          style="scroll-snap-align:start;"
+        >
+          <a href="#" class="block overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)]">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80"
+                alt="Luxury living room"
+                class="h-64 w-full object-cover sm:h-72"
+                loading="lazy"
+              />
+              <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[var(--color-text-primary)]/65 to-transparent"></div>
+
+              <div class="absolute left-4 top-4 flex gap-2">
+                <span class="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[var(--color-text-primary)] backdrop-blur">For rent</span>
+                <span class="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[var(--color-text-primary)] backdrop-blur">Furnished</span>
+              </div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-5">
+                <div class="flex items-end justify-between gap-4">
+                  <div>
+                    <p class="text-sm font-semibold text-white">Vila Nova Conceição • SP</p>
+                    <p class="text-xs text-white/80">Apartment • 1 bed • 1 bath</p>
+                  </div>
+                  <p class="text-sm font-semibold text-white">R$ 12.500/m</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-5">
+              <h3 class="text-base font-semibold text-[var(--color-text-primary)] group-hover:underline group-hover:underline-offset-4">
+                Boutique apartment with refined finishes
+              </h3>
+
+              <div class="mt-3 flex flex-wrap gap-2 text-xs text-[var(--color-text-muted)]">
+                <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-accent)] px-3 py-1">62 m²</span>
+                <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-accent)] px-3 py-1">Amenities</span>
+                <span class="rounded-full border border-[var(--color-border)] bg-[var(--color-accent)] px-3 py-1">Near metro</span>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+
+    <!-- Bottom link -->
+    <div class="mt-10 flex items-center justify-center">
+      <a
+        href="#all-properties"
+        class="inline-flex items-center gap-2 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] px-6 py-3 text-sm font-semibold text-[var(--color-text-primary)] hover:bg-[var(--color-accent)]"
+      >
+        See all properties
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Minimal JS for prev/next buttons (scroll by ~1 card) -->
+  <script>
+    (function () {
+      const track = document.querySelector("[data-carousel]");
+      const prev = document.querySelector("[data-carousel-prev]");
+      const next = document.querySelector("[data-carousel-next]");
+      if (!track || !prev || !next) return;
+
+      function scrollByCard(direction) {
+        const card = track.querySelector("article");
+        const cardWidth = card ? card.getBoundingClientRect().width : 320;
+        const gap = 20; // matches "gap-5" roughly
+        track.scrollBy({ left: direction * (cardWidth + gap), behavior: "smooth" });
+      }
+
+      prev.addEventListener("click", () => scrollByCard(-1));
+      next.addEventListener("click", () => scrollByCard(1));
+    })();
+  </script>
+</section>
+
+<!-- ABOUT (2 columns, lighter) -->
+<section id="about" class="bg-[var(--color-background)]">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+    <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
+      <!-- Left: Photo -->
+      <div class="lg:col-span-5">
+        <div class="relative">
+          <!-- Soft frame -->
+          <div class="absolute -inset-4 -z-10 rounded-[var(--radius-xl)] bg-gradient-to-b from-[var(--color-accent)] to-[var(--color-background)]"></div>
+
+          <figure class="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)]">
+            <!-- Replace with Marilda's real photo -->
+            <img
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80"
+              alt="Marilda Souza portrait"
+              class="h-[420px] w-full object-cover sm:h-[520px]"
+              loading="lazy"
+            />
+            <!-- Minimal caption -->
+            <figcaption class="border-t border-[var(--color-border)] px-6 py-4">
+              <p class="text-sm font-semibold text-[var(--color-text-primary)]">Marilda Souza</p>
+              <p class="text-xs text-[var(--color-text-muted)]">Real Estate Consultant</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Right: Copy + social icons -->
+      <div class="lg:col-span-7">
+        <p class="text-xs font-semibold tracking-[0.18em] text-[var(--color-text-muted)]">ABOUT</p>
+
+        <h2 class="font-display mt-2 text-3xl font-semibold tracking-tight text-[var(--color-text-primary)] sm:text-4xl">
+          Acredito que um imóvel vai muito além da compra — ele representa conquista, segurança e futuro.
+        </h2>
+
+        <p class="mt-4 max-w-2xl text-base leading-relaxed text-[var(--color-text-muted)] sm:text-lg">
+          Atuo no mercado imobiliário em Curitiba com foco em atendimento personalizado, investimentos inteligentes e oportunidades com alto potencial de valorização.
+        </p>
+
+        <!-- Social / contact (horizontal icon list only) -->
+        <div class="mt-8">
+          <p class="text-sm font-semibold text-[var(--color-text-primary)]">Contact</p>
+
+          <div class="mt-3 flex items-center gap-3">
+            <!-- WhatsApp -->
+            <a
+              href="https://wa.me/5511999999999"
+              target="_blank"
+              rel="noreferrer"
+              class="group inline-flex items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-sm font-semibold text-[var(--color-text-primary)] hover:bg-[var(--color-accent)]"
+              aria-label="Contact via WhatsApp"
+              title="WhatsApp"
+            >
+              <span class="inline-flex items-center gap-2">
+                <svg class="h-4 w-4" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                  <path
+                    d="M16 3C9.383 3 4 8.275 4 14.77c0 2.362.726 4.67 2.104 6.64L4.7 28.6l7.48-1.34A12.2 12.2 0 0 0 16 26.54c6.617 0 12-5.275 12-11.77C28 8.275 22.617 3 16 3Z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M12.8 11.2c.23-.52.48-.53.71-.54h.61c.2 0 .48.08.73.56.25.48.84 1.66.91 1.78.07.12.12.27.02.48-.1.21-.15.34-.3.52-.15.18-.31.4-.44.54-.15.15-.3.31-.13.6.17.29.77 1.22 1.65 1.98 1.13.98 2.08 1.28 2.37 1.43.29.15.46.13.63-.07.17-.2.72-.81.91-1.09.19-.28.38-.23.63-.14.25.09 1.59.72 1.86.85.27.13.45.2.52.31.07.11.07.65-.16 1.27-.23.62-1.33 1.2-1.84 1.25-.47.05-.89.17-3.02-.61-2.57-.93-4.23-3.18-4.36-3.35-.13-.17-1.04-1.38-1.04-2.64 0-1.26.69-1.88.94-2.14Z"
+                    fill="currentColor"
+                    opacity="0.9"
+                  />
+                </svg>
+                WhatsApp
+              </span>
+            </a>
+
+            <!-- Email -->
+            <a
+              href="mailto:marilda@example.com"
+              class="group inline-flex items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-sm font-semibold text-[var(--color-text-primary)] hover:bg-[var(--color-accent)]"
+              aria-label="Send an email"
+              title="Email"
+            >
+              <span class="inline-flex items-center gap-2">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M6.5 7.5 12 11.25 17.5 7.5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Email
+              </span>
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noreferrer"
+              class="group inline-flex items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-sm font-semibold text-[var(--color-text-primary)] hover:bg-[var(--color-accent)]"
+              aria-label="Open Instagram"
+              title="Instagram"
+            >
+              <span class="inline-flex items-center gap-2">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9A4.5 4.5 0 0 1 16.5 21h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M12 16.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M17.2 6.9h.01"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Instagram
+              </span>
+            </a>
+          </div>
+
+          <p class="mt-3 text-xs text-[var(--color-text-muted)]">
+            Replace the phone/email/Instagram URL with Marilda’s real contact details.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: Imóveis para Morar ou Investir -->
+<section id="imoveis-morar-investir" class="bg-[var(--color-background)]">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+    <!-- 1) Header Area -->
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-xs font-semibold tracking-[0.18em] text-[var(--color-text-muted)]">
+        SERVIÇOS
+      </p>
+
+      <h2 class="font-display mt-3 text-balance text-3xl font-semibold tracking-tight text-[var(--color-text-primary)] sm:text-4xl">
+        Imóveis para Morar ou Investir
+      </h2>
+
+      <div class="mt-4 space-y-4 text-pretty text-base leading-relaxed text-[var(--color-text-muted)] sm:text-lg">
+        <p>
+          Atendimento personalizado, estratégico e transparente para ajudar você a encontrar
+          imóveis com potencial de valorização, qualidade e segurança.
+        </p>
+        <p>
+          Da busca à decisão final, eu cuido da curadoria e da orientação para que cada passo
+          seja claro — e cada escolha, bem fundamentada.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2) Three-Column Features Grid -->
+    <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+      <!-- Left: Investment -->
+      <article class="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] p-7 shadow-[var(--shadow-soft)]">
+        <div class="flex flex-col items-start gap-4">
+          <div class="grid h-12 w-12 place-items-center rounded-[var(--radius-md)] bg-[var(--color-accent)]">
+            <!-- Bar chart icon -->
+            <svg
+              class="h-6 w-6 text-[var(--color-text-primary)]"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 19.5h16"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M7 19.5v-7"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M12 19.5v-10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M17 19.5v-13"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold tracking-tight text-[var(--color-text-primary)]">
+              Oportunidades de Investimento
+            </h3>
+            <p class="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
+              Conecto você a imóveis com potencial estratégico para morar ou investir,
+              com foco em segurança, liquidez e valorização ao longo do tempo.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Middle: Guidance -->
+      <article class="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] p-7 shadow-[var(--shadow-soft)]">
+        <div class="flex flex-col items-start gap-4">
+          <div class="grid h-12 w-12 place-items-center rounded-[var(--radius-md)] bg-[var(--color-accent)]">
+            <!-- House outline icon -->
+            <svg
+              class="h-6 w-6 text-[var(--color-text-primary)]"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M3.5 11.5 12 4.5l8.5 7"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6.5 10.5V19.5h11V10.5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M10 19.5v-6h4v6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold tracking-tight text-[var(--color-text-primary)]">
+              Orientação Imobiliária
+            </h3>
+            <p class="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
+              Um imóvel vai além da compra: é conquista. Meu trabalho é identificar oportunidades
+              que unam realização pessoal e localização estratégica — com clareza em cada decisão.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Right: Ideal property -->
+      <article class="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] p-7 shadow-[var(--shadow-soft)]">
+        <div class="flex flex-col items-start gap-4">
+          <div class="grid h-12 w-12 place-items-center rounded-[var(--radius-md)] bg-[var(--color-accent)]">
+            <!-- Magnifying glass + key icon (custom minimalist) -->
+            <svg
+              class="h-6 w-6 text-[var(--color-text-primary)]"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <!-- Lens -->
+              <circle
+                cx="10"
+                cy="10"
+                r="5"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <!-- Handle -->
+              <path
+                d="M13.8 13.8 20 20"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <!-- Key teeth integrated near end -->
+              <path
+                d="M18.2 18.2h2.2m-3.6 0h.9m-.9 0v1.1m2.3-1.1v1.1"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold tracking-tight text-[var(--color-text-primary)]">
+              Escolha do Imóvel Ideal
+            </h3>
+            <p class="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">
+              Comprar um imóvel envolve memórias, sonhos e propósito. Eu ajudo você a conectar
+              emoção e estratégia — transformando possibilidades em escolhas certas.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- 3) CTA Area -->
+    <div class="mt-12 flex justify-center">
+      <a
+        href="#contato"
+        class="inline-flex items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-brand-primary)] bg-transparent px-8 py-3 text-xs font-semibold tracking-[0.22em] text-[var(--color-brand-primary)] transition hover:bg-[var(--color-brand-primary)]/10 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/30"
+      >
+        QUERO CONHECER
+      </a>
+    </div>
+
+    <!-- Divider -->
+    <div class="mt-14 h-px w-full bg-[var(--color-border)]"></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="bg-[var(--color-background)]">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+    <!-- Header -->
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-xs font-semibold tracking-[0.18em] text-[var(--color-text-muted)]">DEPOIMENTOS</p>
+      <h2 class="font-display mt-3 text-balance text-3xl font-semibold tracking-tight text-[var(--color-text-primary)] sm:text-4xl">
+        Experiências reais, decisões seguras
+      </h2>
+      <p class="mt-4 text-pretty text-base leading-relaxed text-[var(--color-text-muted)] sm:text-lg">
+        Um processo imobiliário premium deve ser claro, humano e bem conduzido. Aqui estão algumas histórias
+        de clientes que buscaram tranquilidade — e encontraram o imóvel certo.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+      <!-- Card 1 -->
+      <figure class="relative overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] p-7 shadow-[var(--shadow-soft)]">
+        <div class="absolute right-6 top-6 text-[var(--color-border)]" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M10.2 11.2c0 3-1.7 6.1-5.2 7.1-.4.1-.8-.1-.9-.5l-.2-.6c-.1-.4.1-.8.5-.9 1.8-.6 2.6-1.7 2.8-2.9H5.6c-.9 0-1.6-.7-1.6-1.6V8.6C4 7.7 4.7 7 5.6 7h2.9c.9 0 1.6.7 1.6 1.6v2.6Zm10 0c0 3-1.7 6.1-5.2 7.1-.4.1-.8-.1-.9-.5l-.2-.6c-.1-.4.1-.8.5-.9 1.8-.6 2.6-1.7 2.8-2.9h-1.6c-.9 0-1.6-.7-1.6-1.6V8.6c0-.9.7-1.6 1.6-1.6h2.9c.9 0 1.6.7 1.6 1.6v2.6Z"
+            />
+          </svg>
+        </div>
+
+        <blockquote class="relative">
+          <p class="text-sm leading-relaxed text-[var(--color-text-muted)]">
+            A Marilda foi impecável do início ao fim. Entendeu exatamente o que eu buscava e filtrou opções
+            que realmente faziam sentido — sem perda de tempo e com muita segurança na negociação.
+          </p>
+        </blockquote>
+
+        <figcaption class="mt-6 flex items-center justify-between gap-4 border-t border-[var(--color-border)] pt-5">
+          <div>
+            <div class="text-sm font-semibold text-[var(--color-text-primary)]">Camila R.</div>
+            <div class="text-xs text-[var(--color-text-muted)]">Compra • São Paulo</div>
+          </div>
+
+          <!-- subtle rating -->
+          <div class="flex items-center gap-1 text-[var(--color-text-primary)]" aria-label="5 out of 5">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+          </div>
+        </figcaption>
+      </figure>
+
+      <!-- Card 2 -->
+      <figure class="relative overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] p-7 shadow-[var(--shadow-soft)]">
+        <div class="absolute right-6 top-6 text-[var(--color-border)]" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M10.2 11.2c0 3-1.7 6.1-5.2 7.1-.4.1-.8-.1-.9-.5l-.2-.6c-.1-.4.1-.8.5-.9 1.8-.6 2.6-1.7 2.8-2.9H5.6c-.9 0-1.6-.7-1.6-1.6V8.6C4 7.7 4.7 7 5.6 7h2.9c.9 0 1.6.7 1.6 1.6v2.6Zm10 0c0 3-1.7 6.1-5.2 7.1-.4.1-.8-.1-.9-.5l-.2-.6c-.1-.4.1-.8.5-.9 1.8-.6 2.6-1.7 2.8-2.9h-1.6c-.9 0-1.6-.7-1.6-1.6V8.6c0-.9.7-1.6 1.6-1.6h2.9c.9 0 1.6.7 1.6 1.6v2.6Z"
+            />
+          </svg>
+        </div>
+
+        <blockquote class="relative">
+          <p class="text-sm leading-relaxed text-[var(--color-text-muted)]">
+            O diferencial foi a curadoria e a visão estratégica. Eu queria investir com segurança e a Marilda
+            trouxe opções com potencial real de valorização, sempre explicando prós e contras com transparência.
+          </p>
+        </blockquote>
+
+        <figcaption class="mt-6 flex items-center justify-between gap-4 border-t border-[var(--color-border)] pt-5">
+          <div>
+            <div class="text-sm font-semibold text-[var(--color-text-primary)]">Ricardo M.</div>
+            <div class="text-xs text-[var(--color-text-muted)]">Investimento • SP</div>
+          </div>
+
+          <div class="flex items-center gap-1 text-[var(--color-text-primary)]" aria-label="5 out of 5">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+          </div>
+        </figcaption>
+      </figure>
+
+      <!-- Card 3 -->
+      <figure class="relative overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-surface)] p-7 shadow-[var(--shadow-soft)]">
+        <div class="absolute right-6 top-6 text-[var(--color-border)]" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M10.2 11.2c0 3-1.7 6.1-5.2 7.1-.4.1-.8-.1-.9-.5l-.2-.6c-.1-.4.1-.8.5-.9 1.8-.6 2.6-1.7 2.8-2.9H5.6c-.9 0-1.6-.7-1.6-1.6V8.6C4 7.7 4.7 7 5.6 7h2.9c.9 0 1.6.7 1.6 1.6v2.6Zm10 0c0 3-1.7 6.1-5.2 7.1-.4.1-.8-.1-.9-.5l-.2-.6c-.1-.4.1-.8.5-.9 1.8-.6 2.6-1.7 2.8-2.9h-1.6c-.9 0-1.6-.7-1.6-1.6V8.6c0-.9.7-1.6 1.6-1.6h2.9c.9 0 1.6.7 1.6 1.6v2.6Z"
+            />
+          </svg>
+        </div>
+
+        <blockquote class="relative">
+          <p class="text-sm leading-relaxed text-[var(--color-text-muted)]">
+            Eu estava insegura com a venda, mas foi tudo muito bem conduzido. A comunicação foi clara e o
+            posicionamento do imóvel fez diferença. Resultado: vendeu no prazo que combinamos.
+          </p>
+        </blockquote>
+
+        <figcaption class="mt-6 flex items-center justify-between gap-4 border-t border-[var(--color-border)] pt-5">
+          <div>
+            <div class="text-sm font-semibold text-[var(--color-text-primary)]">Fernanda L.</div>
+            <div class="text-xs text-[var(--color-text-muted)]">Venda • São Paulo</div>
+          </div>
+
+          <div class="flex items-center gap-1 text-[var(--color-text-primary)]" aria-label="5 out of 5">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.3 6.2 20.6l1.6-6.6L2.6 9.7l6.8-.6L12 2.8l2.6 6.3 6.8.6-5.2 4.3 1.6 6.6z"/></svg>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- Optional subtle CTA (keeps it premium) -->
+    <div class="mt-12 flex justify-center">
+      <a
+        href="#contact"
+        class="inline-flex items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-brand-primary)] bg-transparent px-8 py-3 text-xs font-semibold tracking-[0.22em] text-[var(--color-brand-primary)] transition hover:bg-[var(--color-brand-primary)]/10 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/30"
+      >
+        QUERO FALAR COM A MARILDA
+      </a>
+    </div>
+
+    <div class="mt-14 h-px w-full bg-[var(--color-border)]"></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="contact" class="bg-[var(--color-background)]">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+    <div class="relative overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-soft)]">
+      <!-- subtle backdrop -->
+      <div class="pointer-events-none absolute inset-0">
+        <div class="absolute -top-24 left-1/2 h-72 w-[56rem] -translate-x-1/2 rounded-full bg-gradient-to-b from-[var(--color-accent)] to-[var(--color-surface)] blur-2xl"></div>
+      </div>
+
+      <div class="relative px-6 py-12 sm:px-10 sm:py-14 lg:px-14">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-xs font-semibold tracking-[0.18em] text-[var(--color-text-muted)]">CONTATO</p>
+
+          <h2 class="font-display mt-3 text-balance text-3xl font-semibold tracking-tight text-[var(--color-text-primary)] sm:text-4xl">
+            Vamos encontrar o imóvel certo para você.
+          </h2>
+
+          <p class="mt-4 text-pretty text-base leading-relaxed text-[var(--color-text-muted)] sm:text-lg">
+            Me conte o que você busca (ou o que quer vender). Eu retorno com curadoria, próximos passos
+            e uma estratégia clara.
+          </p>
+
+          <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <!-- Primary CTA -->
+            <a
+              href="https://wa.me/5511999999999"
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-[var(--radius-md)] bg-[var(--color-text-primary)] px-7 py-3 text-sm font-semibold text-white hover:bg-[#1A1A1A] sm:w-auto"
+              aria-label="Falar com Marilda no WhatsApp"
+            >
+              <svg class="h-4 w-4" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <path
+                  d="M16 3C9.383 3 4 8.275 4 14.77c0 2.362.726 4.67 2.104 6.64L4.7 28.6l7.48-1.34A12.2 12.2 0 0 0 16 26.54c6.617 0 12-5.275 12-11.77C28 8.275 22.617 3 16 3Z"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                />
+                <path
+                  d="M12.8 11.2c.23-.52.48-.53.71-.54h.61c.2 0 .48.08.73.56.25.48.84 1.66.91 1.78.07.12.12.27.02.48-.1.21-.15.34-.3.52-.15.18-.31.4-.44.54-.15.15-.3.31-.13.6.17.29.77 1.22 1.65 1.98 1.13.98 2.08 1.28 2.37 1.43.29.15.46.13.63-.07.17-.2.72-.81.91-1.09.19-.28.38-.23.63-.14.25.09 1.59.72 1.86.85.27.13.45.2.52.31.07.11.07.65-.16 1.27-.23.62-1.33 1.2-1.84 1.25-.47.05-.89.17-3.02-.61-2.57-.93-4.23-3.18-4.36-3.35-.13-.17-1.04-1.38-1.04-2.64 0-1.26.69-1.88.94-2.14Z"
+                  fill="currentColor"
+                  opacity="0.9"
+                />
+              </svg>
+              Falar no WhatsApp
+            </a>
+
+            <!-- Secondary CTA (copper ghost) -->
+            <a
+              href="mailto:marilda@example.com?subject=Contato%20-%20Consultoria%20Imobili%C3%A1ria"
+              class="inline-flex w-full items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-brand-primary)] bg-transparent px-7 py-3 text-xs font-semibold tracking-[0.22em] text-[var(--color-brand-primary)] transition hover:bg-[var(--color-brand-primary)]/10 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand-primary)]/30 sm:w-auto"
+              aria-label="Enviar e-mail para Marilda"
+            >
+              ENVIAR E-MAIL
+            </a>
+          </div>
+
+          <p class="mt-5 text-xs text-[var(--color-text-muted)]">
+            Atendimento com discrição • Curadoria e estratégia • Resposta em horário comercial
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[var(--color-background)]">
+  <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+    <div class="h-px w-full bg-[var(--color-border)]"></div>
+
+    <div class="flex flex-col items-center justify-between gap-4 pt-8 sm:flex-row">
+      <p class="text-sm text-[var(--color-text-muted)]">© 2026 Marilda Souza Imóveis</p>
+
+      <a
+        href="https://instagram.com/"
+        target="_blank"
+        rel="noreferrer"
+        class="inline-flex items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] p-2 text-[var(--color-text-primary)] hover:bg-[var(--color-accent)]"
+        aria-label="Instagram"
+        title="Instagram"
+      >
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9A4.5 4.5 0 0 1 16.5 21h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3Z"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+          <path
+            d="M12 16.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+          <path
+            d="M17.2 6.9h.01"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Marilda Souza — consultora imobiliária. Curadoria sob medida, negociação segura e atendimento humano para compra, venda e locação." />
+  <title>Marilda Souza — Consultora Imobiliária</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#topo" aria-label="Ir para o início">
+        <span class="brand__name">Marilda Souza</span>
+        <span class="brand__role">Consultora imobiliária</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#destaques">Destaques</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="header-cta">
+        <!-- TROCAR: número no link do WhatsApp (wa.me/55DDDNUMERO) -->
+        <a class="btn btn--primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+          Falar no WhatsApp
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Abrir menu" aria-controls="menu-mobile" aria-expanded="false">
+        <span class="nav-toggle__line" aria-hidden="true"></span>
+        <span class="nav-toggle__line" aria-hidden="true"></span>
+        <span class="nav-toggle__line" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Menu mobile sem JS: usa details/summary para acessibilidade e simplicidade -->
+    <div class="mobile-nav container" id="menu-mobile">
+      <details>
+        <summary>Menu</summary>
+        <div class="mobile-nav__links" role="list">
+          <a role="listitem" href="#destaques">Destaques</a>
+          <a role="listitem" href="#sobre">Sobre</a>
+          <a role="listitem" href="#como-funciona">Como funciona</a>
+          <a role="listitem" href="#servicos">Serviços</a>
+          <a role="listitem" href="#depoimentos">Depoimentos</a>
+          <a role="listitem" href="#contato">Contato</a>
+          <a role="listitem" class="btn btn--primary btn--full" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+            Falar no WhatsApp
+          </a>
+        </div>
+      </details>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <!-- Hero principal -->
+    <section class="hero" id="topo" aria-label="Apresentação">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="badge">CRECI</span>
+            <span class="badge badge--subtle">Atendimento com discrição</span>
+            <span class="badge badge--subtle">Curadoria premium</span>
+          </p>
+
+          <h1 class="hero-title">Marilda Souza</h1>
+          <p class="hero-subtitle">Consultora imobiliária</p>
+
+          <p class="hero-lead">
+            Um processo claro, elegante e seguro para comprar, vender ou locar com tranquilidade —
+            sem ruído, sem pressa, com decisões bem amarradas.
+          </p>
+
+          <ul class="hero-bullets" aria-label="Diferenciais">
+            <li>Curadoria sob medida</li>
+            <li>Negociação segura</li>
+            <li>Atendimento humano</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+              WhatsApp
+            </a>
+            <a class="btn btn--ghost" href="#contato">
+              Agendar visita
+            </a>
+          </div>
+
+          <div class="trust-row" aria-label="Sinais de confiança">
+            <div class="trust-item">
+              <span class="trust-item__kicker">Foco</span>
+              <span class="trust-item__value">Bairros selecionados</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-item__kicker">Ritmo</span>
+              <span class="trust-item__value">Processo objetivo</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-item__kicker">Cuidado</span>
+              <span class="trust-item__value">Documentação revisada</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-portrait" aria-label="Foto da consultora">
+          <!-- TROCAR: substitua a imagem por assets/hero-marilda.jpg -->
+          <figure class="portrait-card">
+            <div class="portrait-card__bg" aria-hidden="true"></div>
+            <img
+              class="portrait-card__img"
+              src="assets/hero-marilda.jpg"
+              alt="Retrato de Marilda Souza, consultora imobiliária."
+              loading="eager"
+              width="920"
+              height="1120"
+            />
+            <figcaption class="portrait-card__caption">
+              <span class="quote-mark" aria-hidden="true">“</span>
+              <span>Clareza no processo, respeito ao seu tempo.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Carousel (Manifesto) — HTML/CSS apenas -->
+    <section class="manifesto" aria-label="Manifesto">
+      <div class="manifesto-head container">
+        <h2 class="section-title">Uma consultoria que combina estética e estratégia</h2>
+        <p class="section-lead">
+          Para quem quer escolher bem — com calma, critério e uma negociação limpa.
+        </p>
+      </div>
+
+      <div class="carousel" role="region" aria-label="Carrossel do manifesto" aria-roledescription="carrossel">
+        <div class="carousel__track" aria-label="Slides">
+          <!-- Slide 1 -->
+          <article class="slide" id="slide-1" aria-label="Slide 1">
+            <div class="slide__bg slide__bg--1" aria-hidden="true"></div>
+            <div class="slide__overlay" aria-hidden="true"></div>
+            <div class="slide__content container">
+              <p class="slide__quote">“Encontrar um lar é uma decisão de vida.”</p>
+              <p class="slide__sub">Curadoria com intenção: menos opções, melhores escolhas.</p>
+              <div class="slide__actions">
+                <a class="btn btn--primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a class="btn btn--ghost" href="#contato">Agendar visita</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 2 -->
+          <article class="slide" id="slide-2" aria-label="Slide 2">
+            <div class="slide__bg slide__bg--2" aria-hidden="true"></div>
+            <div class="slide__overlay" aria-hidden="true"></div>
+            <div class="slide__content container">
+              <p class="slide__quote">“Elegância também é simplicidade.”</p>
+              <p class="slide__sub">Processo claro, comunicação direta, zero ruído.</p>
+              <div class="slide__actions">
+                <a class="btn btn--primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a class="btn btn--ghost" href="#como-funciona">Como funciona</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 3 -->
+          <article class="slide" id="slide-3" aria-label="Slide 3">
+            <div class="slide__bg slide__bg--3" aria-hidden="true"></div>
+            <div class="slide__overlay" aria-hidden="true"></div>
+            <div class="slide__content container">
+              <p class="slide__quote">“Segurança é o novo luxo.”</p>
+              <p class="slide__sub">Apoio documental e negociação com responsabilidade.</p>
+              <div class="slide__actions">
+                <a class="btn btn--primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a class="btn btn--ghost" href="#servicos">Ver serviços</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="carousel__nav container" aria-label="Navegação do carrossel">
+          <a class="dot" href="#slide-1" aria-label="Ir para o slide 1"></a>
+          <a class="dot" href="#slide-2" aria-label="Ir para o slide 2"></a>
+          <a class="dot" href="#slide-3" aria-label="Ir para o slide 3"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destaques -->
+    <section class="section" id="destaques" aria-label="Imóveis em destaque">
+      <div class="container section-head">
+        <h2 class="section-title">Destaques</h2>
+        <p class="section-lead">
+          Uma seleção pequena e bem escolhida. Troque as fotos e descrições pelos seus imóveis reais.
+        </p>
+      </div>
+
+      <div class="container cards-grid" role="list">
+        <!-- Card 1 -->
+        <article class="card" role="listitem">
+          <a class="card__media" href="#contato" aria-label="Solicitar detalhes do imóvel 1">
+            <!-- TROCAR: assets/imovel-01.jpg -->
+            <img src="assets/imovel-01.jpg" alt="Sala iluminada com acabamentos neutros." loading="lazy" width="1200" height="800" />
+            <span class="card__badge">Novo</span>
+          </a>
+          <div class="card__body">
+            <div class="card__top">
+              <h3 class="card__title">Apartamento — 2 suítes</h3>
+              <p class="card__meta">Bairro Exemplo • 98 m² • 2 vagas</p>
+            </div>
+            <p class="card__desc">
+              Planta inteligente, luz natural e acabamento atemporal. Ideal para quem quer morar bem sem excessos.
+            </p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="#contato">Pedir detalhes</a>
+              <a class="btn btn--primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" role="listitem">
+          <a class="card__media" href="#contato" aria-label="Solicitar detalhes do imóvel 2">
+            <!-- TROCAR: assets/imovel-02.jpg -->
+            <img src="assets/imovel-02.jpg" alt="Fachada contemporânea com paisagismo discreto." loading="lazy" width="1200" height="800" />
+            <span class="card__badge card__badge--soft">Curadoria</span>
+          </a>
+          <div class="card__body">
+            <div class="card__top">
+              <h3 class="card__title">Casa — condomínio</h3>
+              <p class="card__meta">Região Exemplo • 240 m² • 3 suítes</p>
+            </div>
+            <p class="card__desc">
+              Privacidade, proporções generosas e ambientes com transição suave entre interno e externo.
+            </p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="#contato">Pedir detalhes</a>
+              <a class="btn btn--primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" role="listitem">
+          <a class="card__media" href="#contato" aria-label="Solicitar detalhes do imóvel 3">
+            <!-- TROCAR: assets/imovel-03.jpg -->
+            <img src="assets/imovel-03.jpg" alt="Cozinha minimalista com tons quentes e madeira clara." loading="lazy" width="1200" height="800" />
+            <span class="card__badge card__badge--soft">Oportunidade</span>
+          </a>
+          <div class="card__body">
+            <div class="card__top">
+              <h3 class="card__title">Studio — investimento</h3>
+              <p class="card__meta">Centro Exemplo • 38 m² • mobiliável</p>
+            </div>
+            <p class="card__desc">
+              Boa liquidez, perfil versátil e potencial de renda. Transparência do começo ao contrato.
+            </p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="#contato">Pedir detalhes</a>
+              <a class="btn btn--primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="section section--alt" id="sobre" aria-label="Sobre a Marilda">
+      <div class="container two-col">
+        <div>
+          <h2 class="section-title">Sobre</h2>
+          <p class="section-lead">
+            Consultoria imobiliária com postura boutique: curadoria, discrição e foco no que importa.
+          </p>
+
+          <div class="about-points" role="list">
+            <div class="about-point" role="listitem">
+              <h3>🟡 Curadoria que poupa tempo</h3>
+              <p>
+                Você recebe opções alinhadas ao seu perfil e prioridade — não uma avalanche de anúncios.
+              </p>
+            </div>
+            <div class="about-point" role="listitem">
+              <h3>🟡 Negociação com método</h3>
+              <p>
+                Estratégia, comparativos e condução responsável para reduzir riscos e ruídos.
+              </p>
+            </div>
+            <div class="about-point" role="listitem">
+              <h3>🟡 Pós-visita com clareza</h3>
+              <p>
+                Próximos passos definidos: documentação, prazos, propostas e alinhamentos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="about-aside" aria-label="Cartão de credenciais">
+          <div class="panel">
+            <p class="panel__kicker">Credenciais</p>
+            <ul class="panel__list">
+              <li><strong>CRECI:</strong> <span class="muted">00.000-F</span></li>
+              <li><strong>Atuação:</strong> <span class="muted">compra, venda e locação</span></li>
+              <li><strong>Perfil:</strong> <span class="muted">residencial & investimento</span></li>
+            </ul>
+            <div class="panel__actions">
+              <a class="btn btn--primary btn--full" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+                Conversar no WhatsApp
+              </a>
+              <a class="btn btn--ghost btn--full" href="#contato">
+                Agendar visita
+              </a>
+            </div>
+            <p class="fineprint">
+              *Substitua o CRECI, áreas e bairro(s) conforme sua atuação real.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Como funciona -->
+    <section class="section" id="como-funciona" aria-label="Como funciona">
+      <div class="container section-head">
+        <h2 class="section-title">Como funciona</h2>
+        <p class="section-lead">Um fluxo simples — do primeiro contato ao contrato, com cuidado em cada etapa.</p>
+      </div>
+
+      <div class="container steps" role="list">
+        <article class="step" role="listitem">
+          <p class="step__num" aria-hidden="true">01</p>
+          <h3>Briefing objetivo</h3>
+          <p>Preferências, prioridades, orçamento e prazos — sem burocracia desnecessária.</p>
+        </article>
+        <article class="step" role="listitem">
+          <p class="step__num" aria-hidden="true">02</p>
+          <h3>Curadoria & visitas</h3>
+          <p>Seleção enxuta, alinhamento rápido e visitas com foco no que importa.</p>
+        </article>
+        <article class="step" role="listitem">
+          <p class="step__num" aria-hidden="true">03</p>
+          <h3>Proposta & segurança</h3>
+          <p>Estratégia de negociação, checagens e suporte até a formalização.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="section section--alt" id="servicos" aria-label="Serviços">
+      <div class="container section-head">
+        <h2 class="section-title">Serviços</h2>
+        <p class="section-lead">Escolha o tipo de apoio que você precisa. O tom é premium; a execução é prática.</p>
+      </div>
+
+      <div class="container service-grid" role="list">
+        <article class="service" role="listitem">
+          <h3>🟡 Compra</h3>
+          <p>Curadoria, visitas, análise de perfil do imóvel e condução de proposta.</p>
+          <ul class="service__tags" aria-label="Destaques do serviço de compra">
+            <li>Curadoria</li>
+            <li>Negociação</li>
+            <li>Checklist</li>
+          </ul>
+        </article>
+
+        <article class="service" role="listitem">
+          <h3>🟡 Venda</h3>
+          <p>Posicionamento, apresentação do imóvel e triagem de interessados com seriedade.</p>
+          <ul class="service__tags" aria-label="Destaques do serviço de venda">
+            <li>Valuation</li>
+            <li>Apresentação</li>
+            <li>Triagem</li>
+          </ul>
+        </article>
+
+        <article class="service" role="listitem">
+          <h3>🟡 Locação</h3>
+          <p>Seleção do perfil certo, velocidade com segurança e comunicação sem atritos.</p>
+          <ul class="service__tags" aria-label="Destaques do serviço de locação">
+            <li>Agilidade</li>
+            <li>Conferência</li>
+            <li>Contrato</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="container cta-band" role="region" aria-label="Chamada para ação">
+        <div class="cta-band__copy">
+          <h3>Pronta para dar o próximo passo com tranquilidade.</h3>
+          <p>Me diga seu bairro de interesse e o que é inegociável para você.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a class="btn btn--ghost" href="#contato">Agendar visita</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="section" id="depoimentos" aria-label="Depoimentos">
+      <div class="container section-head">
+        <h2 class="section-title">Depoimentos</h2>
+        <p class="section-lead">Textos curtos, humanos, e com credibilidade (sem “milagres”).</p>
+      </div>
+
+      <div class="container testimonials" role="list">
+        <figure class="testimonial" role="listitem">
+          <blockquote>
+            A Marilda foi extremamente clara e cuidadosa. O processo ficou leve e seguro — do primeiro contato ao fechamento.
+          </blockquote>
+          <figcaption>
+            <span class="testimonial__name">Cliente A</span>
+            <span class="testimonial__meta">Compra • 2026</span>
+          </figcaption>
+        </figure>
+
+        <figure class="testimonial" role="listitem">
+          <blockquote>
+            Curadoria impecável: poucas opções, todas muito alinhadas. Economizamos tempo e evitamos visitas desnecessárias.
+          </blockquote>
+          <figcaption>
+            <span class="testimonial__name">Cliente B</span>
+            <span class="testimonial__meta">Locação • 2026</span>
+          </figcaption>
+        </figure>
+
+        <figure class="testimonial" role="listitem">
+          <blockquote>
+            Negociação madura e objetiva. Senti que eu tinha alguém realmente do meu lado, com método e serenidade.
+          </blockquote>
+          <figcaption>
+            <span class="testimonial__name">Cliente C</span>
+            <span class="testimonial__meta">Venda • 2025</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section section--alt" id="contato" aria-label="Contato">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <h2 class="section-title">Contato</h2>
+          <p class="section-lead">
+            Para atendimento rápido, WhatsApp. Para agendar visita, preencha o formulário com o essencial.
+          </p>
+
+          <div class="contact-cards" role="list">
+            <div class="mini-card" role="listitem">
+              <p class="mini-card__kicker">WhatsApp</p>
+              <p class="mini-card__value">
+                <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+                  Conversar agora
+                </a>
+              </p>
+              <p class="mini-card__hint">Resposta em horário comercial.</p>
+            </div>
+
+            <div class="mini-card" role="listitem">
+              <p class="mini-card__kicker">E-mail</p>
+              <p class="mini-card__value"><a href="mailto:contato@marildasouza.com">contato@marildasouza.com</a></p>
+              <p class="mini-card__hint">Troque pelo seu e-mail real.</p>
+            </div>
+
+            <div class="mini-card" role="listitem">
+              <p class="mini-card__kicker">Atendimento</p>
+              <p class="mini-card__value">São Paulo • SP</p>
+              <p class="mini-card__hint">Ajuste para sua cidade/região.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap" aria-label="Formulário de contato">
+          <form class="form" action="#" method="post">
+            <div class="form__row">
+              <label class="field">
+                <span class="field__label">Nome</span>
+                <input class="field__input" name="nome" autocomplete="name" required />
+              </label>
+
+              <label class="field">
+                <span class="field__label">WhatsApp</span>
+                <input class="field__input" name="whatsapp" inputmode="tel" autocomplete="tel" placeholder="(DD) 9XXXX-XXXX" required />
+              </label>
+            </div>
+
+            <div class="form__row">
+              <label class="field">
+                <span class="field__label">Objetivo</span>
+                <select class="field__input" name="objetivo" required>
+                  <option value="" selected disabled>Selecione</option>
+                  <option>Comprar</option>
+                  <option>Vender</option>
+                  <option>Alugar</option>
+                  <option>Investir</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span class="field__label">Região / bairro</span>
+                <input class="field__input" name="regiao" placeholder="Ex.: Jardins, Moema, etc." />
+              </label>
+            </div>
+
+            <label class="field">
+              <span class="field__label">Mensagem</span>
+              <textarea class="field__input field__textarea" name="mensagem" rows="5" placeholder="Conte em 3 linhas o que é essencial para você."></textarea>
+            </label>
+
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit">Enviar</button>
+              <a class="btn btn--ghost" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+                Prefiro WhatsApp
+              </a>
+            </div>
+
+            <p class="fineprint">
+              Ao enviar, você concorda em ser contatado(a) para retorno sobre este atendimento.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-brand__name">Marilda Souza</p>
+        <p class="footer-brand__meta">Consultora imobiliária • CRECI <span class="muted">00.000-F</span></p>
+      </div>
+
+      <div class="footer-links" aria-label="Links do rodapé">
+        <a href="#sobre">Sobre</a>
+        <a href="#destaques">Destaques</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <p class="footer-note">
+        © <span id="ano">2026</span> Marilda Souza. Conteúdo demonstrativo — substitua textos, CRECI e imagens.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Sem JS: ano fixo no HTML por simplicidade/produção estática -->
+</body>
+</html>

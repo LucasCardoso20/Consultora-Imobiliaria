@@ -1,0 +1,20 @@
+/* src/styles.css */
+
+
+/* Remova os estilos de h1, h2, h3 e html daqui */
+body {
+  background-color: #f0f0f0 !important;
+  margin: 0;
+  font-family: "Inter", "sans-serif";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+} 
+
+a{
+  text-decoration: none;
+  color: inherit; 
+}

@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marilda Souza • Consultora Imobiliária</title>
+
+    <!-- Fonts (editorial display + clean sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind (CDN for prototyping) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui"],
+              display: ["Playfair Display", "ui-serif", "Georgia"],
+            },
+            colors: {
+              ink: { 950: "#0B1220", 900: "#0F172A", 700: "#334155" },
+              sand: { 50: "#FAFAF9", 100: "#F5F5F4", 200: "#E7E5E4" },
+              copper: { 500: "#B08B5A", 600: "#9A7648" },
+            },
+            boxShadow: {
+              soft: "0 18px 60px rgba(2, 6, 23, 0.14)",
+              card: "0 12px 40px rgba(2,6,23,0.10)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      /* hide scrollbar in carousels */
+      [data-carousel]::-webkit-scrollbar,
+      [data-track]::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-ink-950">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink-950 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+      >Pular para o conteúdo</a
+    >
+
+    <!-- Subtle background glow -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div
+        class="absolute left-1/2 top-[-160px] h-[560px] w-[1040px] -translate-x-1/2 rounded-full bg-gradient-to-b from-sand-100 to-white blur-3xl"
+      ></div>
+    </div>
+
+    <!-- TOP BAR (optional, premium + practical) -->
+    <div class="border-b border-sand-200 bg-white/70 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-xs sm:px-6 lg:px-8">
+        <div class="flex items-center gap-3 text-ink-700">
+          <span class="hidden sm:inline">Atendimento com discrição • Curadoria e estratégia</span>
+          <span class="sm:hidden">Curadoria e estratégia</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="mailto:marilda@example.com"
+            class="text-ink-700 hover:text-ink-950"
+            aria-label="Enviar e-mail"
+            >marilda@example.com</a
+          >
+          <span class="text-sand-200">•</span>
+          <a
+            href="https://wa.me/5511999999999"
+            target="_blank"
+            rel="noreferrer"
+            class="font-semibold text-ink-950 hover:text-ink-900"
+            aria-label="Falar no WhatsApp"
+            >WhatsApp</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 border-b border-sand-200 bg-white/80 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <!-- Brand -->
+        <a href="#" class="inline-flex items-center gap-3" aria-label="Marilda Souza - Início">
+          <span class="relative grid h-11 w-11 place-items-center rounded-2xl bg-ink-950 text-white shadow-sm">
+            <span class="text-sm font-semibold tracking-wide">MS</span>
+            <span class="absolute -inset-[1px] rounded-2xl ring-1 ring-black/10"></span>
+          </span>
+          <div class="leading-tight">
+            <div class="text-sm font-semibold tracking-tight">Marilda Souza</div>
+            <div class="text-xs text-ink-700">Consultora Imobiliária</div>
+          </div>
+        </a>
+
+        <!-- Nav (desktop) -->
+        <nav class="hidden items-center gap-8 md:flex" aria-label="Navegação principal">
+          <a href="#services" class="text-sm text-ink-700 hover:text-ink-950">Serviços</a>
+          <a href="#listings" class="text-sm text-ink-700 hover:text-ink-950">Imóveis</a>
+          <a href="#about" class="text-sm text-ink-700 hover:text-ink-950">Sobre</a>
+          <a href="#testimonials" class="text-sm text-ink-700 hover:text-ink-950">Depoimentos</a>
+          <a href="#contact" class="text-sm text-ink-700 hover:text-ink-950">Contato</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-3">
+          <a
+            href="#contact"
+            class="hidden rounded-full border border-sand-200 px-4 py-2 text-sm font-medium text-ink-950 hover:bg-sand-50 md:inline-flex"
+          >
+            Agendar conversa
+          </a>
+
+          <a
+            href="https://wa.me/5511999999999"
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center justify-center rounded-full bg-ink-950 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-ink-900"
+          >
+            WhatsApp
+          </a>
+
+          <!-- Mobile menu button -->
+          <button
+            type="button"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-sand-200 text-ink-950 hover:bg-sand-50 md:hidden"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="hidden border-t border-sand-200 bg-white md:hidden" data-menu>
+        <nav class="mx-auto max-w-7xl px-4 py-4 sm:px-6" aria-label="Menu mobile">
+          <div class="grid gap-2">
+            <a class="rounded-xl px-3 py-2 text-sm text-ink-700 hover:bg-sand-50 hover:text-ink-950" href="#services"
+              >Serviços</a
+            >
+            <a class="rounded-xl px-3 py-2 text-sm text-ink-700 hover:bg-sand-50 hover:text-ink-950" href="#listings"
+              >Imóveis</a
+            >
+            <a class="rounded-xl px-3 py-2 text-sm text-ink-700 hover:bg-sand-50 hover:text-ink-950" href="#about"
+              >Sobre</a
+            >
+            <a
+              class="rounded-xl px-3 py-2 text-sm text-ink-700 hover:bg-sand-50 hover:text-ink-950"
+              href="#testimonials"
+              >Depoimentos</a
+            >
+            <a class="rounded-xl px-3 py-2 text-sm text-ink-700 hover:bg-sand-50 hover:text-ink-950" href="#contact"
+              >Contato</a
+            >
+          </div>
+
+          <div class="mt-4 flex gap-3">
+            <a
+              href="#contact"
+              class="flex-1 rounded-full border border-sand-200 px-4 py-2 text-center text-sm font-semibold text-ink-950 hover:bg-sand-50"
+              >Agendar</a
+            >
+            <a
+              href="https://wa.me/5511999999999"
+              target="_blank"
+              rel="noreferrer"
+              class="flex-1 rounded-full bg-ink-950 px-4 py-2 text-center text-sm font-semibold text-white hover:bg-ink-900"
+              >WhatsApp</a
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO (full-bleed image like reference, but still “Marilda” premium) -->
+      <section class="relative overflow-hidden">
+        <!-- background image -->
+        <div class="absolute inset-0 -z-10">
+          <img
+            src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=2200&q=80"
+            alt="Interior elegante de apartamento"
+            class="h-full w-full object-cover"
+            loading="eager"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-ink-950/75 via-ink-950/45 to-ink-950/20"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white/0"></div>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <div class="max-w-2xl">
+            <div
+              class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs text-white/90 backdrop-blur"
+            >
+              <span class="h-1.5 w-1.5 rounded-full bg-copper-500"></span>
+              Curadoria • Negociação • Acompanhamento ponta a ponta
+            </div>
+
+            <h1 class="mt-6 font-display text-5xl font-semibold leading-[1.05] tracking-tight text-white sm:text-6xl">
+              Marilda Souza
+            </h1>
+
+            <p class="mt-4 text-pretty text-base leading-relaxed text-white/85 sm:text-lg">
+              Consultoria imobiliária moderna e elegante — para comprar, vender ou investir com clareza, segurança e
+              discrição do primeiro contato à assinatura.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#listings"
+                class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink-950 shadow-soft hover:bg-sand-50"
+              >
+                Ver imóveis em destaque
+              </a>
+
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur hover:bg-white/15"
+              >
+                Solicitar avaliação do imóvel
+              </a>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+              <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+                <p class="text-sm font-semibold text-white">Comprar</p>
+                <p class="mt-1 text-xs text-white/80">Filtro eficiente + visitas inteligentes</p>
+              </div>
+              <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+                <p class="text-sm font-semibold text-white">Vender</p>
+                <p class="mt-1 text-xs text-white/80">Preço + posicionamento premium</p>
+              </div>
+              <div class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+                <p class="text-sm font-semibold text-white">Investir</p>
+                <p class="mt-1 text-xs text-white/80">Liquidez, risco e valorização</p>
+              </div>
+            </div>
+
+            <div class="mt-6 text-xs text-white/70">
+              Resposta rápida em horário comercial • Processo confidencial • Curadoria com transparência
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft transition to white (like reference) -->
+        <div class="h-16 bg-gradient-to-b from-transparent to-white"></div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="bg-white">
+        <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <div class="mx-auto max-w-3xl text-center">
+            <p class="text-xs font-semibold tracking-[0.18em] text-ink-700">SERVIÇOS</p>
+            <h2 class="mt-3 font-display text-4xl font-semibold tracking-tight text-ink-950 sm:text-5xl">
+              Imóveis para morar ou investir
+            </h2>
+            <p class="mt-4 text-pretty text-base leading-relaxed text-ink-700 sm:text-lg">
+              Atendimento personalizado, estratégico e transparente para encontrar oportunidades com qualidade,
+              segurança e potencial de valorização.
+            </p>
+          </div>
+
+          <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+            <article class="rounded-3xl border border-sand-200 bg-white p-7 shadow-card">
+              <div class="flex items-start gap-4">
+                <div class="grid h-12 w-12 place-items-center rounded-2xl bg-sand-50">
+                  <svg class="h-6 w-6 text-ink-950" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M4 19.5h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M7 19.5v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M12 19.5v-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="M17 19.5v-13" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold tracking-tight text-ink-950">Oportunidades de investimento</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-ink-700">
+                    Avaliação de cenário, liquidez e risco. Você recebe recomendações objetivas — sem “vender por
+                    vender”.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-5 h-px w-full bg-sand-200"></div>
+              <p class="mt-4 text-xs text-ink-700">
+                Entregável: shortlist com racional + próximos passos claros.
+              </p>
+            </article>
+
+            <article class="rounded-3xl border border-sand-200 bg-white p-7 shadow-card">
+              <div class="flex items-start gap-4">
+                <div class="grid h-12 w-12 place-items-center rounded-2xl bg-sand-50">
+                  <svg class="h-6 w-6 text-ink-950" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M3.5 11.5 12 4.5l8.5 7"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.5 10.5V19.5h11V10.5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10 19.5v-6h4v6"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold tracking-tight text-ink-950">Compra com segurança</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-ink-700">
+                    Visitas objetivas, análise do imóvel e suporte na tomada de decisão — com linguagem simples e
+                    transparência.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-5 h-px w-full bg-sand-200"></div>
+              <p class="mt-4 text-xs text-ink-700">Foco: localização, qualidade, documentação e negociação.</p>
+            </article>
+
+            <article class="rounded-3xl border border-sand-200 bg-white p-7 shadow-card">
+              <div class="flex items-start gap-4">
+                <div class="grid h-12 w-12 place-items-center rounded-2xl bg-sand-50">
+                  <svg class="h-6 w-6 text-ink-950" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="10" cy="10" r="5" stroke="currentColor" stroke-width="2" />
+                    <path d="M13.8 13.8 20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path
+                      d="M18.2 18.2h2.2m-3.6 0h.9m-.9 0v1.1m2.3-1.1v1.1"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold tracking-tight text-ink-950">Venda com posicionamento premium</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-ink-700">
+                    Precificação, apresentação e narrativa do imóvel para atrair compradores qualificados e reduzir
+                    “curiosos”.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-5 h-px w-full bg-sand-200"></div>
+              <p class="mt-4 text-xs text-ink-700">Resultado: mais eficiência e melhor poder de negociação.</p>
+            </article>
+          </div>
+
+          <div class="mt-12 flex justify-center">
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center rounded-full border border-copper-500 bg-transparent px-8 py-3 text-xs font-semibold tracking-[0.22em] text-copper-500 transition hover:bg-copper-500/10 focus:outline-none focus:ring-2 focus:ring-copper-500/30"
+            >
+              QUERO CONVERSAR
+            </a>
+          </div>
+
+          <div class="mt-14 h-px w-full bg-sand-200"></div>
+        </div>
+      </section>
+
+      <!-- FEATURED PROPERTIES (carousel) -->
+      <section id="listings" class="bg-white">
+        <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p class="text-xs font-semibold tracking-[0.18em] text-ink-700">IMÓVEIS</p>
+              <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-950 sm:text-4xl">
+                Seleção em destaque
+              </h2>
+              <p class="mt-2 max-w-2xl text-sm leading-relaxed text-ink-700">
+                Uma curadoria com fotos fortes, boa localização e clareza de preço.
+              </p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button
+                type="button"
+                class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-200 bg-white text-ink-950 hover:bg-sand-50 disabled:opacity-40"
+                aria-label="Imóveis anteriores"
+                data-carousel-prev
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M15 18l-6-6 6-6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <button
+                type="button"
+                class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-200 bg-white text-ink-950 hover:bg-sand-50 disabled:opacity-40"
+                aria-label="Próximos imóveis"
+                data-carousel-next
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M9 6l6 6-6 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="relative mt-10">
+            <div
+              data-carousel
+              class="flex gap-5 overflow-x-auto scroll-smooth pb-2 [-ms-overflow-style:none] [scrollbar-width:none]"
+              style="scroll-snap-type: x mandatory"
+            >
+              <!-- CARD TEMPLATE -->
+              <article class="group min-w-[82%] snap-start sm:min-w-[52%] lg:min-w-[34%]" style="scroll-snap-align:start">
+                <a href="#" class="block overflow-hidden rounded-3xl border border-sand-200 bg-white shadow-card">
+                  <div class="relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1600&q=80"
+                      alt="Casa moderna com jardim"
+                      class="h-64 w-full object-cover sm:h-72"
+                      loading="lazy"
+                    />
+                    <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-ink-950/65 to-transparent"></div>
+
+                    <div class="absolute left-4 top-4 flex gap-2">
+                      <span class="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink-950 backdrop-blur"
+                        >À venda</span
+                      >
+                      <span class="rounded-full bg-ink-950/85 px-3 py-1 text-xs font-semibold text-white backdrop-blur"
+                        >Novo</span
+                      >
+                    </div>
+
+                    <div class="absolute bottom-0 left-0 right-0 p-5">
+                      <div class="flex items-end justify-between gap-4">
+                        <div>
+                          <p class="text-sm font-semibold text-white">Jardins • São Paulo</p>
+                          <p class="text-xs text-white/80">Sobrado • 3 dorm • 2 banh</p>
+                        </div>
+                        <p class="text-sm font-semibold text-white">R$ 2.450.000</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="p-5">
+                    <h3 class="text-base font-semibold text-ink-950 group-hover:underline group-hover:underline-offset-4">
+                      Sobrado iluminado com área externa privativa
+                    </h3>
+
+                    <div class="mt-3 flex flex-wrap gap-2 text-xs text-ink-700">
+                      <span class="rounded-full border border-sand-200 bg-sand-50 px-3 py-1">140 m²</span>
+                      <span class="rounded-full border border-sand-200 bg-sand-50 px-3 py-1">2 vagas</span>
+                      <span class="rounded-full border border-sand-200 bg-sand-50 px-3 py-1">Perto de parques</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="group min-w-[82%] snap-start sm:min-w-[52%] lg:min-w-[34%]" style="scroll-snap-align:start">
+                <a href="#" class="block overflow-hidden rounded-3xl border border-sand-200 bg-white shadow-card">
+                  <div class="relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80"
+                      alt="Apartamento elegante"
+                      class="h-64 w-full object-cover sm:h-72"
+                      loading="lazy"
+                    />
+                    <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-ink-950/65 to-transparent"></div>
+
+                    <div class="absolute left-4 top-4 flex gap-2">
+                      <span class="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink-950 backdrop-blur"
+                        >À venda</span
+                      >
+                      <span class="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink-950 backdrop-blur"
+                        >Prime</span
+                      >
+                    </div>
+
+                    <div class="absolute bottom-0 left-0 right-0 p-5">
+                      <div class="flex items-end justify-between gap-4">
+                        <div>
+                          <p class="text-sm font-semibold text-white">Itaim Bibi • SP</p>
+                          <p class="text-xs text-white/80">Apto • 2 dorm • 2 banh</p>
+                        </div>
+                        <p class="text-sm font-semibold text-white">R$ 1.980.000</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="p-5">
+                    <h3 class="text-base font-semibold text-ink-950 group-hover:underline group-hover:underline-offset-4">
+                      Apartamento minimalista com vista aberta
+                    </h3>
+
+                    <div class="mt-3 flex flex-wrap gap-2 text-xs text-ink-700">
+                      <span class="rounded-full border border-sand-200 bg-sand-50 px-3 py-1">98 m²</span>
+                      <span class="rounded-full border border-sand-200 bg-sand-50 px-3 py-1">1 vaga</span>
+                      <span class="rounded-full border border-sand-200 bg-sand-50 px-3 py-1">Portaria</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="group min-w-[82%] snap-start sm:min-w-[52%] lg:min-w-[34%]" style="scroll-snap-align:start">
+                <a href="#" class="block overflow-hidden rounded-3xl border border-sand-200 bg-white shadow-card">
+                  <div class="relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80"
+                      alt="Fachada contemporânea"
+                      class="h-64 w-full object-cover sm:h-72"
+                      loading="lazy"
+                    />
+                    <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-ink-950/65 to-transparent"></div>
+
+                    <div class="absolute left-4 top-4 flex gap-2">
+                      <span class="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink-950 backdrop-blur"
+                        >À venda</span
+                      >
+                      <span class="rounded-full bg-ink-950/85 px-3 py-1 text-xs font-semibold text-white backdrop-blur"
+                        >Visita</span
+                      >
+                    </div>
+
+                    <div class="absolute bottom-0 left-0 right-0 p-5">
+                      <div class="flex items-end justify-between gap-4">
+                        <div>
+                          <p class="text-sm font-semibold text-white">Alphaville • Barueri</p>
+                          <p class="text-xs text-white/80">Casa • 4 dorm • 5 banh</p>
+                        </div>
+                        <p class="text-sm font-semibold text-white">R$ 4.900.000</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="p-5">
+                    <h3 class="text-base font-semibold text-ink-950 group-hover:underline group-hover:underline-offset-4">
+                      Casa contemporânea com piscina e gourmet
+                    </h3>
+
+                    <div class="mt-3 flex flex-wrap gap-2 text-xs text-ink-700">
+                      <span class="rounded-full border border-sand-200 bg-sand-50 px-3 py-1">320 m²</span>
+                      <span class="rounded-full border border-sand-200 bg-sand-50 px-3 py-1">4 vagas</span>
+                      <span class="rounded-full border border-sand-200 bg-sand-50 px-3 py-1">Condomínio</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+
+          <div class="mt-10 flex items-center justify-center">
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 rounded-full border border-sand-200 bg-white px-6 py-3 text-sm font-semibold text-ink-950 hover:bg-sand-50"
+            >
+              Pedir imóveis do meu perfil
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M5 12h14M13 5l7 7-7 7"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="mt-14 h-px w-full bg-sand-200"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT (2 columns + badge like reference) -->
+      <section id="about" class="bg-white">
+        <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
+            <div class="lg:col-span-5">
+              <div class="relative">
+                <div class="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-b from-sand-100 to-white"></div>
+
+                <figure class="overflow-hidden rounded-[2rem] border border-sand-200 bg-white shadow-soft">
+                  <img
+                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80"
+                    alt="Retrato profissional (substituir pela foto da Marilda)"
+                    class="h-[420px] w-full object-cover sm:h-[520px]"
+                    loading="lazy"
+                  />
+                  <figcaption class="border-t border-sand-200 px-6 py-4">
+                    <p class="text-sm font-semibold text-ink-950">Marilda Souza</p>
+                    <p class="text-xs text-ink-700">Consultora Imobiliária</p>
+                  </figcaption>
+                </figure>
+
+                <!-- Experience badge -->
+                <div
+                  class="absolute bottom-6 right-6 rounded-3xl border border-sand-200 bg-white/90 px-5 py-4 shadow-card backdrop-blur"
+                  aria-label="Experiência"
+                >
+                  <div class="text-2xl font-semibold text-ink-950">10+</div>
+                  <div class="text-xs text-ink-700">anos de experiência</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7">
+              <p class="text-xs font-semibold tracking-[0.18em] text-ink-700">SOBRE</p>
+
+              <h2 class="mt-2 font-display text-4xl font-semibold tracking-tight text-ink-950 sm:text-5xl">
+                Um imóvel vai além da compra — é conquista, segurança e futuro.
+              </h2>
+
+              <p class="mt-4 max-w-2xl text-base leading-relaxed text-ink-700 sm:text-lg">
+                Atuo com foco em atendimento personalizado, investimentos inteligentes e oportunidades com alto potencial
+                de valorização. Meu papel é transformar um processo complexo em decisões claras, bem fundamentadas e
+                tranquilas.
+              </p>
+
+              <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div class="rounded-3xl border border-sand-200 bg-white p-6 shadow-card">
+                  <p class="text-sm font-semibold text-ink-950">Curadoria real</p>
+                  <p class="mt-2 text-sm text-ink-700">
+                    Menos “catálogo infinito”, mais seleção com critério e contexto.
+                  </p>
+                </div>
+                <div class="rounded-3xl border border-sand-200 bg-white p-6 shadow-card">
+                  <p class="text-sm font-semibold text-ink-950">Negociação estratégica</p>
+                  <p class="mt-2 text-sm text-ink-700">
+                    Discrição, timing e argumentos — sem desgaste desnecessário.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <p class="text-sm font-semibold text-ink-950">Contato</p>
+                <div class="mt-3 flex flex-wrap items-center gap-3">
+                  <a
+                    href="https://wa.me/5511999999999"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="inline-flex items-center gap-2 rounded-full border border-sand-200 bg-white px-4 py-2 text-sm font-semibold text-ink-950 hover:bg-sand-50"
+                  >
+                    WhatsApp
+                  </a>
+                  <a
+                    href="mailto:marilda@example.com"
+                    class="inline-flex items-center gap-2 rounded-full border border-sand-200 bg-white px-4 py-2 text-sm font-semibold text-ink-950 hover:bg-sand-50"
+                  >
+                    E-mail
+                  </a>
+                  <a
+                    href="https://instagram.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="inline-flex items-center gap-2 rounded-full border border-sand-200 bg-white px-4 py-2 text-sm font-semibold text-ink-950 hover:bg-sand-50"
+                  >
+                    Instagram
+                  </a>
+                </div>
+                <p class="mt-3 text-xs text-ink-700">Substitua pelos dados reais (telefone, e-mail, Instagram).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-14 h-px w-full bg-sand-200"></div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS (carousel like reference) -->
+      <section id="testimonials" class="bg-white">
+        <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <div class="mx-auto max-w-3xl text-center">
+            <p class="text-xs font-semibold tracking-[0.18em] text-ink-700">DEPOIMENTOS</p>
+            <h2 class="mt-3 font-display text-4xl font-semibold tracking-tight text-ink-950 sm:text-5xl">
+              Experiências reais. Decisões seguras.
+            </h2>
+            <p class="mt-4 text-pretty text-base leading-relaxed text-ink-700 sm:text-lg">
+              Um processo premium deve ser claro, humano e bem conduzido.
+            </p>
+          </div>
+
+          <div class="mt-10 flex items-center justify-center gap-2">
+            <button
+              type="button"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-200 bg-white text-ink-950 hover:bg-sand-50 disabled:opacity-40"
+              aria-label="Depoimentos anteriores"
+              data-track-prev
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M15 18l-6-6 6-6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-200 bg-white text-ink-950 hover:bg-sand-50 disabled:opacity-40"
+              aria-label="Próximos depoimentos"
+              data-track-next
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M9 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="relative mt-8">
+            <div
+              data-track
+              class="flex gap-6 overflow-x-auto scroll-smooth pb-2 [-ms-overflow-style:none] [scrollbar-width:none]"
+              style="scroll-snap-type:x mandatory"
+            >
+              <figure class="min-w-[86%] snap-start sm:min-w-[55%] lg:min-w-[34%]" style="scroll-snap-align:start">
+                <div class="relative overflow-hidden rounded-3xl border border-sand-200 bg-white p-7 shadow-card">
+                  <p class="text-sm leading-relaxed text-ink-700">
+                    A Marilda foi impecável do início ao fim. Filtrou opções que faziam sentido e conduziu a negociação
+                    com muita segurança.
+                  </p>
+                  <div class="mt-6 flex items-center justify-between gap-4 border-t border-sand-200 pt-5">
+                    <div>
+                      <div class="text-sm font-semibold text-ink-950">Camila R.</div>
+                      <div class="text-xs text-ink-700">Compra • São Paulo</div>
+                    </div>
+                    <div class="text-xs font-semibold text-copper-500">★★★★★</div>
+                  </div>
+                </div>
+              </figure>
+
+              <figure class="min-w-[86%] snap-start sm:min-w-[55%] lg:min-w-[34%]" style="scroll-snap-align:start">
+                <div class="relative overflow-hidden rounded-3xl border border-sand-200 bg-white p-7 shadow-card">
+                  <p class="text-sm leading-relaxed text-ink-700">
+                    O diferencial foi a curadoria e a visão estratégica. Investi com segurança porque entendi prós,
+                    contras e cenário.
+                  </p>
+                  <div class="mt-6 flex items-center justify-between gap-4 border-t border-sand-200 pt-5">
+                    <div>
+                      <div class="text-sm font-semibold text-ink-950">Ricardo M.</div>
+                      <div class="text-xs text-ink-700">Investimento • SP</div>
+                    </div>
+                    <div class="text-xs font-semibold text-copper-500">★★★★★</div>
+                  </div>
+                </div>
+              </figure>
+
+              <figure class="min-w-[86%] snap-start sm:min-w-[55%] lg:min-w-[34%]" style="scroll-snap-align:start">
+                <div class="relative overflow-hidden rounded-3xl border border-sand-200 bg-white p-7 shadow-card">
+                  <p class="text-sm leading-relaxed text-ink-700">
+                    Eu estava insegura com a venda, mas foi tudo muito bem conduzido. Comunicação clara e resultado no
+                    prazo.
+                  </p>
+                  <div class="mt-6 flex items-center justify-between gap-4 border-t border-sand-200 pt-5">
+                    <div>
+                      <div class="text-sm font-semibold text-ink-950">Fernanda L.</div>
+                      <div class="text-xs text-ink-700">Venda • São Paulo</div>
+                    </div>
+                    <div class="text-xs font-semibold text-copper-500">★★★★★</div>
+                  </div>
+                </div>
+              </figure>
+            </div>
+          </div>
+
+          <div class="mt-14 h-px w-full bg-sand-200"></div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA (tinted band like reference, but Marilda palette) -->
+      <section id="contact" class="relative overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+          <img
+            src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=2200&q=80"
+            alt="Casa moderna"
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-ink-950/80 via-ink-950/55 to-ink-950/20"></div>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <div class="relative overflow-hidden rounded-[2.25rem] border border-white/15 bg-white/10 shadow-soft backdrop-blur">
+            <div class="relative px-6 py-12 sm:px-10 sm:py-14 lg:px-14">
+              <div class="mx-auto max-w-2xl text-center">
+                <p class="text-xs font-semibold tracking-[0.18em] text-white/80">CONTATO</p>
+
+                <h2 class="mt-3 font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                  Vamos encontrar o imóvel certo para você.
+                </h2>
+
+                <p class="mt-4 text-pretty text-base leading-relaxed text-white/85 sm:text-lg">
+                  Me conte o que você busca (ou o que quer vender). Eu retorno com curadoria, próximos passos e uma
+                  estratégia clara.
+                </p>
+
+                <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  <a
+                    href="https://wa.me/5511999999999"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="inline-flex w-full items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-ink-950 hover:bg-sand-50 sm:w-auto"
+                  >
+                    Falar no WhatsApp
+                  </a>
+
+                  <a
+                    href="mailto:marilda@example.com?subject=Contato%20-%20Consultoria%20Imobili%C3%A1ria"
+                    class="inline-flex w-full items-center justify-center rounded-full border border-copper-500 bg-transparent px-7 py-3 text-xs font-semibold tracking-[0.22em] text-copper-500 transition hover:bg-copper-500/10 focus:outline-none focus:ring-2 focus:ring-copper-500/30 sm:w-auto"
+                  >
+                    ENVIAR E-MAIL
+                  </a>
+                </div>
+
+                <p class="mt-5 text-xs text-white/75">
+                  Atendimento com discrição • Curadoria e estratégia • Resposta em horário comercial
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 text-center text-xs text-white/70">
+            © 2026 Marilda Souza Imóveis • Instagram:
+            <a class="underline underline-offset-4 hover:text-white" href="https://instagram.com/" target="_blank" rel="noreferrer"
+              >@marilda</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Floating WhatsApp (conversion helper) -->
+      <a
+        href="https://wa.me/5511999999999"
+        target="_blank"
+        rel="noreferrer"
+        class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-ink-950 px-5 py-3 text-sm font-semibold text-white shadow-soft hover:bg-ink-900"
+        aria-label="Abrir WhatsApp"
+      >
+        WhatsApp
+        <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
+      </a>
+    </main>
+
+    <script>
+      // Mobile menu toggle
+      (function () {
+        const btn = document.querySelector("[data-menu-button]");
+        const menu = document.querySelector("[data-menu]");
+        if (!btn || !menu) return;
+
+        btn.addEventListener("click", () => {
+          const open = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!open));
+          menu.classList.toggle("hidden", open);
+        });
+
+        // Close on nav click
+        menu.addEventListener("click", (e) => {
+          const a = e.target.closest("a");
+          if (!a) return;
+          btn.setAttribute("aria-expanded", "false");
+          menu.classList.add("hidden");
+        });
+      })();
+
+      // Carousel helper (properties + testimonials)
+      function setupCarousel(trackSel, prevSel, nextSel) {
+        const track = document.querySelector(trackSel);
+        const prev = document.querySelector(prevSel);
+        const next = document.querySelector(nextSel);
+        if (!track || !prev || !next) return;
+
+        const getStep = () => {
+          const first = track.querySelector("article, figure");
+          const w = first ? first.getBoundingClientRect().width : 360;
+          const gap = 24; // close enough for gap-6 / gap-5
+          return w + gap;
+        };
+
+        function updateButtons() {
+          const maxScroll = track.scrollWidth - track.clientWidth - 2;
+          prev.disabled = track.scrollLeft <= 2;
+          next.disabled = track.scrollLeft >= maxScroll;
+        }
+
+        function scrollByStep(dir) {
+          track.scrollBy({ left: dir * getStep(), behavior: "smooth" });
+          // update after scroll settles
+          setTimeout(updateButtons, 250);
+        }
+
+        prev.addEventListener("click", () => scrollByStep(-1));
+        next.addEventListener("click", () => scrollByStep(1));
+        track.addEventListener("scroll", updateButtons, { passive: true });
+        window.addEventListener("resize", updateButtons);
+
+        updateButtons();
+      }
+
+      setupCarousel("[data-carousel]", "[data-carousel-prev]", "[data-carousel-next]");
+      setupCarousel("[data-track]", "[data-track-prev]", "[data-track-next]");
+    </script>
+  </body>
+</html>

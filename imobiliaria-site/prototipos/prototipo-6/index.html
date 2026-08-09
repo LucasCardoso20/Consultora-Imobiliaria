@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marilda Souza | Premium Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        primary: '#1c1917', /* Deep Stone */
+                        accent: '#d6d3d1',  /* Warm Gray */
+                        bgLight: '#fafaf9'  /* Off-White */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-bgLight text-primary font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <header class="w-full px-8 lg:px-16 py-8 flex justify-between items-center z-10 relative">
+        <div class="text-2xl font-serif font-medium tracking-wide">
+            Marilda Souza<span class="text-accent">.</span>
+        </div>
+        <nav class="hidden md:flex space-x-12 text-sm font-medium tracking-widest uppercase text-primary/70">
+            <a href="#" class="hover:text-primary transition-colors duration-300">Portfolio</a>
+            <a href="#" class="hover:text-primary transition-colors duration-300">Services</a>
+            <a href="#" class="hover:text-primary transition-colors duration-300">Journal</a>
+        </nav>
+        <div>
+            <a href="#" class="border border-primary/20 px-6 py-3 text-sm tracking-wide hover:bg-primary hover:text-white transition-all duration-300">
+                Contact
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex-grow flex items-center px-8 lg:px-16 pb-16 lg:pb-0 relative">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center">
+            
+            <!-- Text Content (Left) -->
+            <div class="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center">
+                <span class="text-xs font-medium uppercase tracking-[0.2em] text-primary/60 mb-6 block">
+                    Exclusive Real Estate Consultant
+                </span>
+                
+                <h1 class="font-serif text-5xl lg:text-7xl leading-[1.1] mb-8">
+                    Curating<br>
+                    <span class="italic text-primary/80">exceptional</span><br>
+                    living spaces.
+                </h1>
+                
+                <p class="text-lg text-primary/70 font-light leading-relaxed mb-10 max-w-md">
+                    Elevating the standard of luxury real estate. Discover properties that match your vision, guided by unparalleled market expertise and absolute discretion.
+                </p>
+                
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="bg-primary text-white px-8 py-4 text-sm tracking-wide hover:bg-primary/90 transition-colors duration-300">
+                        View Exclusive Listings
+                    </a>
+                    <a href="#" class="text-sm font-medium tracking-wide hover:text-primary/70 transition-colors duration-300 underline decoration-accent underline-offset-8">
+                        Meet Marilda
+                    </a>
+                </div>
+            </div>
+
+            <!-- Impactful Image (Right) -->
+            <div class="lg:col-span-7 order-1 lg:order-2 relative w-full h-[50vh] lg:h-[80vh]">
+                <!-- Decorative background accent -->
+                <div class="absolute -inset-4 bg-accent/20 z-0 hidden lg:block transform translate-x-8 translate-y-8"></div>
+                
+                <!-- Main Featured Image -->
+                <img 
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                    alt="Marilda Souza, Premium Real Estate Consultant" 
+                    class="relative z-10 w-full h-full object-cover object-center shadow-2xl"
+                >
+            </div>
+            
+        </div>
+    </main>
+
+</body>
+</html>

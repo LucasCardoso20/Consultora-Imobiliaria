@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marilda Souza — Consultora Imobiliária. Especialista em imóveis de alto padrão. Atendimento personalizado, método próprio e resultados comprovados." />
+  <title>Marilda Souza — Consultora Imobiliária</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Skip link para acessibilidade -->
+  <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Marilda Souza — página inicial">
+        Marilda Souza
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul role="list">
+          <li><a href="#destaques">Destaques</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <!-- Trocar número: substitua 5500000000000 pelo número real com DDI+DDD -->
+      <a href="https://wa.me/5500000000000" class="btn btn-primary header-cta" target="_blank" rel="noopener noreferrer" aria-label="Falar com Marilda Souza no WhatsApp">
+        Falar no WhatsApp
+      </a>
+      <!-- Menu mobile toggle (CSS-only via checkbox hack) -->
+      <label class="nav-toggle" for="nav-open" aria-label="Abrir menu de navegação">
+        <span></span><span></span><span></span>
+      </label>
+      <input type="checkbox" id="nav-open" class="nav-checkbox" aria-hidden="true" />
+    </div>
+    <!-- Mobile nav drawer -->
+    <div class="mobile-nav" aria-hidden="true">
+      <nav aria-label="Menu mobile">
+        <ul role="list">
+          <li><a href="#destaques">Destaques</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <!-- Trocar número -->
+          <li><a href="https://wa.me/5500000000000" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===================== 1. HERO CAROUSEL ===================== -->
+    <section class="hero-carousel" aria-label="Apresentação — Manifesto" id="inicio">
+
+      <div class="carousel-track" aria-live="polite">
+
+        <!-- Slide 1 -->
+        <!-- Trocar imagem: assets/manifesto-01.jpg -->
+        <article class="carousel-slide" id="slide-1" aria-label="Slide 1 de 3">
+          <div class="slide-bg" style="background-image: url('assets/manifesto-01.jpg');" role="img" aria-label="Imóvel de alto padrão — sala com vista panorâmica"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <p class="slide-label">Consultoria Imobiliária</p>
+            <h1 class="slide-headline">O imóvel certo<br>não é o mais caro.<br>É o que transforma sua vida.</h1>
+            <div class="slide-actions">
+              <!-- Trocar número -->
+              <a href="https://wa.me/5500000000000" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+              <a href="#contato" class="btn btn-ghost">Agendar visita</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 2 -->
+        <!-- Trocar imagem: assets/manifesto-02.jpg -->
+        <article class="carousel-slide" id="slide-2" aria-label="Slide 2 de 3">
+          <div class="slide-bg" style="background-image: url('assets/manifesto-02.jpg');" role="img" aria-label="Fachada residencial contemporânea ao entardecer"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <p class="slide-label">Método & Curadoria</p>
+            <h1 class="slide-headline">Cada busca começa<br>com uma escuta.<br>Cada escolha, com propósito.</h1>
+            <div class="slide-actions">
+              <!-- Trocar número -->
+              <a href="https://wa.me/5500000000000" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+              <a href="#contato" class="btn btn-ghost">Agendar visita</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 3 -->
+        <!-- Trocar imagem: assets/manifesto-03.jpg -->
+        <article class="carousel-slide" id="slide-3" aria-label="Slide 3 de 3">
+          <div class="slide-bg" style="background-image: url('assets/manifesto-03.jpg');" role="img" aria-label="Jardim e piscina em imóvel residencial de alto padrão"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <p class="slide-label">Resultados com Integridade</p>
+            <h1 class="slide-headline">Mais de 10 anos<br>ajudando famílias a encontrar<br>onde realmente querem viver.</h1>
+            <div class="slide-actions">
+              <!-- Trocar número -->
+              <a href="https://wa.me/5500000000000" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+              <a href="#contato" class="btn btn-ghost">Agendar visita</a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /carousel-track -->
+
+      <!-- Dots de navegação -->
+      <nav class="carousel-dots" aria-label="Navegação dos slides">
+        <a href="#slide-1" class="dot" aria-label="Ir para o slide 1"></a>
+        <a href="#slide-2" class="dot" aria-label="Ir para o slide 2"></a>
+        <a href="#slide-3" class="dot" aria-label="Ir para o slide 3"></a>
+      </nav>
+
+    </section>
+    <!-- /hero-carousel -->
+
+    <!-- ===================== 2. VITRINE — DESTAQUES ===================== -->
+    <section class="section section-destaques" id="destaques" aria-labelledby="destaques-titulo">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Portfólio</span>
+          <h2 id="destaques-titulo" class="section-title">Imóveis em Destaque</h2>
+          <p class="section-subtitle">Uma seleção cuidadosa para quem sabe o que quer.</p>
+        </header>
+
+        <div class="properties-grid" role="list">
+
+          <!-- Card 1 -->
+          <!-- Trocar imagem: assets/imovel-01.jpg -->
+          <article class="property-card" role="listitem">
+            <div class="property-image-wrap">
+              <img src="assets/imovel-01.jpg" alt="Apartamento de alto padrão na Vila Nova Conceição — sala de estar com pé-direito duplo" class="property-image" loading="lazy" />
+              <span class="property-badge badge-novo">Novo</span>
+            </div>
+            <div class="property-body">
+              <h3 class="property-title">Vila Nova Conceição</h3>
+              <ul class="property-meta" aria-label="Detalhes do imóvel">
+                <li><span class="meta-icon" aria-hidden="true">◈</span> Vila Nova Conceição, SP</li>
+                <li><span class="meta-icon" aria-hidden="true">⬜</span> 320 m²</li>
+                <li><span class="meta-icon" aria-hidden="true">⬡</span> 4 quartos</li>
+              </ul>
+              <p class="property-desc">Apartamento com arquitetura contemporânea, acabamentos de alto padrão e vista privilegiada.</p>
+              <div class="property-actions">
+                <!-- Trocar número -->
+                <a href="https://wa.me/5500000000000" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a href="#contato" class="btn btn-ghost btn-sm">Pedir detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <!-- Trocar imagem: assets/imovel-02.jpg -->
+          <article class="property-card" role="listitem">
+            <div class="property-image-wrap">
+              <img src="assets/imovel-02.jpg" alt="Casa com jardim e piscina no Jardim Europa — área externa ao entardecer" class="property-image" loading="lazy" />
+              <span class="property-badge badge-curadoria">Curadoria</span>
+            </div>
+            <div class="property-body">
+              <h3 class="property-title">Jardim Europa</h3>
+              <ul class="property-meta" aria-label="Detalhes do imóvel">
+                <li><span class="meta-icon" aria-hidden="true">◈</span> Jardim Europa, SP</li>
+                <li><span class="meta-icon" aria-hidden="true">⬜</span> 580 m²</li>
+                <li><span class="meta-icon" aria-hidden="true">⬡</span> 5 suítes</li>
+              </ul>
+              <p class="property-desc">Casa térrea em rua tranquila, com jardim projetado, piscina aquecida e ampla área de convívio.</p>
+              <div class="property-actions">
+                <!-- Trocar número -->
+                <a href="https://wa.me/5500000000000" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a href="#contato" class="btn btn-ghost btn-sm">Pedir detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <!-- Trocar imagem: assets/imovel-03.jpg -->
+          <article class="property-card" role="listitem">
+            <div class="property-image-wrap">
+              <img src="assets/imovel-03.jpg" alt="Cobertura duplex no Itaim Bibi — varanda gourmet com vista para São Paulo" class="property-image" loading="lazy" />
+              <span class="property-badge badge-oportunidade">Oportunidade</span>
+            </div>
+            <div class="property-body">
+              <h3 class="property-title">Itaim Bibi</h3>
+              <ul class="property-meta" aria-label="Detalhes do imóvel">
+                <li><span class="meta-icon" aria-hidden="true">◈</span> Itaim Bibi, SP</li>
+                <li><span class="meta-icon" aria-hidden="true">⬜</span> 210 m²</li>
+                <li><span class="meta-icon" aria-hidden="true">⬡</span> 3 suítes</li>
+              </ul>
+              <p class="property-desc">Cobertura duplex com varanda gourmet, vista livre e localização estratégica no coração do Itaim.</p>
+              <div class="property-actions">
+                <!-- Trocar número -->
+                <a href="https://wa.me/5500000000000" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a href="#contato" class="btn btn-ghost btn-sm">Pedir detalhes</a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /properties-grid -->
+
+        <div class="section-footer-link">
+          <!-- Pode apontar para página de portfólio completo futuramente -->
+          <a href="#contato" class="link-more">Ver todos os imóveis &rarr;</a>
+        </div>
+
+      </div>
+    </section>
+    <!-- /destaques -->
+
+    <!-- ===================== 3. SOBRE MIM ===================== -->
+    <section class="section section-sobre" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="container sobre-grid">
+
+        <!-- Coluna esquerda: foto -->
+        <div class="sobre-photo-col">
+          <!-- Trocar imagem: assets/hero-marilda.jpg ou assets/about-marilda.jpg -->
+          <img
+            src="assets/hero-marilda.jpg"
+            alt="Marilda Souza, consultora imobiliária — retrato profissional"
+            class="sobre-photo"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Coluna direita: conteúdo -->
+        <div class="sobre-content-col">
+          <span class="section-label">Quem sou eu</span>
+          <h2 id="sobre-titulo" class="section-title sobre-title">Sobre mim</h2>
+          <div class="sobre-divider" aria-hidden="true"></div>
+          <p class="sobre-text">
+            Há mais de uma década acompanho famílias e investidores na busca e venda de imóveis em São Paulo. Para mim, cada negociação começa muito antes da visita ao imóvel — começa na conversa, na escuta de quem você é e no que realmente importa para você.
+          </p>
+          <p class="sobre-text">
+            Meu método combina rigor técnico com atenção humana. Acredito que o imóvel certo não é apenas aquele que cabe no orçamento, mas o que faz sentido para o seu momento de vida.
+          </p>
+
+          <!-- Métricas -->
+          <div class="sobre-metrics" role="list" aria-label="Conquistas e números">
+            <div class="metric-item" role="listitem">
+              <span class="metric-value">10+</span>
+              <span class="metric-label">anos de experiência</span>
+            </div>
+            <div class="metric-item" role="listitem">
+              <span class="metric-value">200+</span>
+              <span class="metric-label">imóveis negociados</span>
+            </div>
+            <div class="metric-item" role="listitem">
+              <span class="metric-value">R$ 300M+</span>
+              <span class="metric-label">em volume negociado</span>
+            </div>
+            <div class="metric-item" role="listitem">
+              <span class="metric-value">98%</span>
+              <span class="metric-label">de satisfação</span>
+            </div>
+          </div>
+
+          <!-- Selos / Badges -->
+          <div class="sobre-badges" aria-label="Credenciais e especialidades">
+            <span class="badge-tag">CRECI–SP 000000</span>
+            <span class="badge-tag">Alto Padrão</span>
+            <span class="badge-tag">Zona Sul SP</span>
+            <span class="badge-tag">Zona Oeste SP</span>
+            <span class="badge-tag">Investimentos</span>
+          </div>
+
+          <!-- Trocar número -->
+          <a href="https://wa.me/5500000000000" class="btn btn-gold" target="_blank" rel="noopener noreferrer">
+            Falar comigo
+          </a>
+        </div>
+
+      </div>
+    </section>
+    <!-- /sobre -->
+
+    <!-- ===================== 4. COMO FUNCIONA ===================== -->
+    <section class="section section-processo bg-warm" id="como-funciona" aria-labelledby="processo-titulo">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">O método</span>
+          <h2 id="processo-titulo" class="section-title">Como funciona</h2>
+          <p class="section-subtitle">Um processo claro, do início ao fechamento.</p>
+        </header>
+
+        <ol class="processo-steps" aria-label="Etapas do processo de consultoria" role="list">
+
+          <li class="step-card" role="listitem">
+            <span class="step-number" aria-hidden="true">01</span>
+            <h3 class="step-title">Entender seu momento</h3>
+            <p class="step-desc">Começamos com uma conversa honesta sobre seus objetivos, orçamento, estilo de vida e o que você realmente precisa — não apenas o que você acha que quer.</p>
+          </li>
+
+          <li class="step-card" role="listitem">
+            <span class="step-number" aria-hidden="true">02</span>
+            <h3 class="step-title">Curadoria personalizada</h3>
+            <p class="step-desc">Faço uma seleção criteriosa com as opções que de fato se encaixam no seu perfil — sem perda de tempo com imóveis que não fazem sentido para você.</p>
+          </li>
+
+          <li class="step-card" role="listitem">
+            <span class="step-number" aria-hidden="true">03</span>
+            <h3 class="step-title">Visitas com propósito</h3>
+            <p class="step-desc">Acompanho cada visita presencialmente, com atenção aos detalhes que fazem diferença: infraestrutura, documentação, potencial de valorização e vizinhança.</p>
+          </li>
+
+          <li class="step-card" role="listitem">
+            <span class="step-number" aria-hidden="true">04</span>
+            <h3 class="step-title">Negociação e proposta</h3>
+            <p class="step-desc">Represento seus interesses com firmeza e estratégia. Cuido da proposta, da contraproposta e de todos os detalhes para que você tenha a melhor condição possível.</p>
+          </li>
+
+          <li class="step-card" role="listitem">
+            <span class="step-number" aria-hidden="true">05</span>
+            <h3 class="step-title">Fechamento tranquilo</h3>
+            <p class="step-desc">Acompanho toda a documentação, cartório e entrega das chaves. Você só precisa se preocupar em planejar o próximo capítulo.</p>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+    <!-- /como-funciona -->
+
+    <!-- ===================== 5. SERVIÇOS ===================== -->
+    <section class="section section-servicos" id="servicos" aria-labelledby="servicos-titulo">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Atuação</span>
+          <h2 id="servicos-titulo" class="section-title">Serviços</h2>
+          <p class="section-subtitle">Como posso te ajudar.</p>
+        </header>
+
+        <div class="servicos-grid" role="list">
+
+          <article class="servico-card" role="listitem">
+            <div class="servico-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h3 class="servico-title">Compra</h3>
+            <p class="servico-desc">Do primeiro sonho ao contrato assinado. Encontro o imóvel que combina com o seu momento, estilo de vida e objetivos de longo prazo.</p>
+            <div class="servico-tags">
+              <span class="chip">Residencial</span>
+              <span class="chip">Alto padrão</span>
+              <span class="chip">Primeira compra</span>
+            </div>
+          </article>
+
+          <article class="servico-card" role="listitem">
+            <div class="servico-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <h3 class="servico-title">Venda</h3>
+            <p class="servico-desc">Estratégia de precificação, posicionamento no mercado e condução da negociação para que você venda no tempo certo e pelo melhor valor.</p>
+            <div class="servico-tags">
+              <span class="chip">Avaliação de mercado</span>
+              <span class="chip">Marketing</span>
+              <span class="chip">Negociação</span>
+            </div>
+          </article>
+
+          <article class="servico-card" role="listitem">
+            <div class="servico-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+              </svg>
+            </div>
+            <h3 class="servico-title">Investimento</h3>
+            <p class="servico-desc">Identifico oportunidades com potencial de valorização e renda passiva. Do imóvel na planta ao ativo consolidado, com análise criteriosa de risco e retorno.</p>
+            <div class="servico-tags">
+              <span class="chip">Valorização</span>
+              <span class="chip">Renda passiva</span>
+              <span class="chip">Portfólio</span>
+            </div>
+          </article>
+
+          <article class="servico-card" role="listitem">
+            <div class="servico-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </div>
+            <h3 class="servico-title">Locação</h3>
+            <p class="servico-desc">Acompanho proprietários e inquilinos desde a busca até a assinatura do contrato, garantindo segurança jurídica e tranquilidade para ambas as partes.</p>
+            <div class="servico-tags">
+              <span class="chip">Residencial</span>
+              <span class="chip">Jurídico</span>
+              <span class="chip">Gestão</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <!-- /servicos -->
+
+    <!-- ===================== 6. DEPOIMENTOS ===================== -->
+    <section class="section section-depoimentos" id="depoimentos" aria-labelledby="depoimentos-titulo">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Prova social</span>
+          <h2 id="depoimentos-titulo" class="section-title">O que dizem os clientes</h2>
+        </header>
+
+        <!-- 6A: Featured Testimonial — inspirado em "Client Experiences" -->
+        <div class="featured-testimonial-wrap" aria-label="Depoimentos em destaque">
+
+          <div class="featured-track" id="featured-track" aria-live="polite">
+
+            <!-- Depoimento 1 -->
+            <article class="featured-slide" id="dep-1" aria-label="Depoimento de Ana Lima">
+              <div class="featured-avatar-wrap">
+                <!-- Trocar imagem: assets/avatar-ana.jpg -->
+                <img src="assets/avatar-ana.jpg" alt="Ana Lima, cliente" class="featured-avatar" loading="lazy" />
+              </div>
+              <div class="featured-content">
+                <div class="stars" aria-label="Avaliação: 5 de 5 estrelas" role="img">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+                <blockquote class="featured-quote">
+                  <p>"A Marilda entendeu exatamente o que a gente precisava logo na primeira conversa. Em menos de três semanas visitamos quatro imóveis, e no quarto já fechamos negócio. Processo impecável, sem pressão nenhuma."</p>
+                </blockquote>
+                <cite class="featured-cite">— Ana Lima, São Paulo</cite>
+              </div>
+            </article>
+
+            <!-- Depoimento 2 -->
+            <article class="featured-slide" id="dep-2" aria-label="Depoimento de Ricardo Fonseca">
+              <div class="featured-avatar-wrap">
+                <!-- Trocar imagem: assets/avatar-ricardo.jpg -->
+                <img src="assets/avatar-ricardo.jpg" alt="Ricardo Fonseca, cliente" class="featured-avatar" loading="lazy" />
+              </div>
+              <div class="featured-content">
+                <div class="stars" aria-label="Avaliação: 5 de 5 estrelas" role="img">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+                <blockquote class="featured-quote">
+                  <p>"Já havia tentado vender meu apartamento com outras corretoras por mais de seis meses. Com a Marilda, em 40 dias o imóvel estava vendido — pelo valor que eu precisava. Muito profissional e transparente."</p>
+                </blockquote>
+                <cite class="featured-cite">— Ricardo Fonseca, Itaim Bibi</cite>
+              </div>
+            </article>
+
+            <!-- Depoimento 3 -->
+            <article class="featured-slide" id="dep-3" aria-label="Depoimento de Cláudia Martins">
+              <div class="featured-avatar-wrap">
+                <!-- Trocar imagem: assets/avatar-claudia.jpg -->
+                <img src="assets/avatar-claudia.jpg" alt="Cláudia Martins, cliente" class="featured-avatar" loading="lazy" />
+              </div>
+              <div class="featured-content">
+                <div class="stars" aria-label="Avaliação: 5 de 5 estrelas" role="img">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+                <blockquote class="featured-quote">
+                  <p>"Invest­i no meu primeiro imóvel com a orientação da Marilda e foi a melhor decisão que tomei. Ela me mostrou opções que eu nunca teria encontrado sozinha, com análise clara de cada uma."</p>
+                </blockquote>
+                <cite class="featured-cite">— Cláudia Martins, Jardins</cite>
+              </div>
+            </article>
+
+          </div><!-- /featured-track -->
+
+          <!-- Setas visuais -->
+          <a href="#dep-3" class="dep-arrow dep-arrow-prev" aria-label="Depoimento anterior">&larr;</a>
+          <a href="#dep-2" class="dep-arrow dep-arrow-next" aria-label="Próximo depoimento">&rarr;</a>
+
+          <!-- Indicadores -->
+          <nav class="dep-dots" aria-label="Navegação de depoimentos em destaque">
+            <a href="#dep-1" class="dep-dot" aria-label="Depoimento 1"></a>
+            <a href="#dep-2" class="dep-dot" aria-label="Depoimento 2"></a>
+            <a href="#dep-3" class="dep-dot" aria-label="Depoimento 3"></a>
+          </nav>
+
+        </div><!-- /featured-testimonial-wrap -->
+
+      </div>
+    </section>
+    <!-- /depoimentos (featured) -->
+
+    <!-- 6B: Faixa dark premium com cards -->
+    <section class="section section-dep-dark" aria-labelledby="dep-dark-titulo">
+      <div class="container">
+        <header class="section-header section-header-light">
+          <span class="section-label section-label-light">Experiências reais</span>
+          <h2 id="dep-dark-titulo" class="section-title section-title-light">Resultados que falam por si.</h2>
+          <p class="section-subtitle section-subtitle-light">Histórias de quem confiou no processo.</p>
+        </header>
+
+        <div class="dep-dark-grid" role="list">
+
+          <article class="dep-dark-card" role="listitem">
+            <span class="dep-quote-mark" aria-hidden="true">&ldquo;</span>
+            <p class="dep-dark-text">Não foi só uma compra. Foi a primeira vez que me senti completamente segura em uma negociação imobiliária. Cada etapa foi explicada com clareza.</p>
+            <footer class="dep-dark-footer">
+              <!-- Trocar imagem: assets/avatar-patricia.jpg -->
+              <img src="assets/avatar-patricia.jpg" alt="Patrícia Alves" class="dep-dark-avatar" loading="lazy" />
+              <div>
+                <strong class="dep-dark-name">Patrícia Alves</strong>
+                <span class="dep-dark-role">Vila Madalena, 2024</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="dep-dark-card" role="listitem">
+            <span class="dep-quote-mark" aria-hidden="true">&ldquo;</span>
+            <p class="dep-dark-text">Vendemos a casa da família em tempo recorde. A Marilda trouxe compradores qualificados desde a primeira semana. Indicação garantida.</p>
+            <footer class="dep-dark-footer">
+              <!-- Trocar imagem: assets/avatar-marcos.jpg -->
+              <img src="assets/avatar-marcos.jpg" alt="Marcos Andrade" class="dep-dark-avatar" loading="lazy" />
+              <div>
+                <strong class="dep-dark-name">Marcos Andrade</strong>
+                <span class="dep-dark-role">Morumbi, 2023</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="dep-dark-card" role="listitem">
+            <span class="dep-quote-mark" aria-hidden="true">&ldquo;</span>
+            <p class="dep-dark-text">Terceira transação com a Marilda. Ela conhece o mercado de um jeito que poucos corretores conhecem — e trata cada cliente como se fosse o único.</p>
+            <footer class="dep-dark-footer">
+              <!-- Trocar imagem: assets/avatar-fernanda.jpg -->
+              <img src="assets/avatar-fernanda.jpg" alt="Fernanda Castro" class="dep-dark-avatar" loading="lazy" />
+              <div>
+                <strong class="dep-dark-name">Fernanda Castro</strong>
+                <span class="dep-dark-role">Pinheiros, 2024</span>
+              </div>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <!-- /dep-dark -->
+
+    <!-- ===================== 7. CTA FINAL + CONTATO ===================== -->
+    <section class="section section-contato" id="contato" aria-labelledby="contato-titulo">
+      <div class="container">
+
+        <!-- CTA final -->
+        <div class="cta-final">
+          <h2 id="contato-titulo" class="cta-final-headline">Pronto para o próximo passo?</h2>
+          <p class="cta-final-sub">Seja para comprar, vender ou investir — estou aqui para ouvir antes de qualquer coisa.</p>
+          <div class="cta-final-actions">
+            <!-- Trocar número -->
+            <a href="https://wa.me/5500000000000" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+            <a href="#contato-form" class="btn btn-ghost">Agendar visita</a>
+          </div>
+        </div>
+
+        <!-- 3 cards de contato — inspirado em "Contact Me" -->
+        <div class="contact-cards" role="list" aria-label="Formas de contato">
+
+          <div class="contact-card" role="listitem">
+            <div class="contact-card-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <h3 class="contact-card-title">E-mail</h3>
+            <p class="contact-card-sub">Para consultas gerais</p>
+            <!-- Trocar e-mail -->
+            <a href="mailto:contato@marildasouza.com.br" class="contact-card-value">contato@marildasouza.com.br</a>
+          </div>
+
+          <div class="contact-card" role="listitem">
+            <div class="contact-card-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z"/>
+              </svg>
+            </div>
+            <h3 class="contact-card-title">WhatsApp</h3>
+            <p class="contact-card-sub">Para resposta rápida</p>
+            <!-- Trocar número -->
+            <a href="https://wa.me/5500000000000" class="contact-card-value" target="_blank" rel="noopener noreferrer">+55 (00) 00000-0000</a>
+          </div>
+
+          <div class="contact-card" role="listitem">
+            <div class="contact-card-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </div>
+            <h3 class="contact-card-title">Redes sociais</h3>
+            <p class="contact-card-sub">Acompanhe o mercado</p>
+            <div class="social-links">
+              <!-- Trocar links -->
+              <a href="https://instagram.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Marilda Souza">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </a>
+              <a href="https://linkedin.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Marilda Souza">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div><!-- /contact-cards -->
+
+        <!-- Formulário -->
+        <div class="contact-form-wrap" id="contato-form">
+          <form class="contact-form" action="#" method="post" aria-label="Formulário de contato">
+            <h3 class="form-title">Envie uma mensagem</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="whatsapp">WhatsApp <span aria-hidden="true">*</span></label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="objetivo">Objetivo</label>
+                <select id="objetivo" name="objetivo">
+                  <option value="" disabled selected>Selecione…</option>
+                  <option value="comprar">Comprar</option>
+                  <option value="vender">Vender</option>
+                  <option value="investir">Investir</option>
+                  <option value="alugar">Alugar</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="bairro">Bairro ou Região</label>
+                <input type="text" id="bairro" name="bairro" placeholder="Ex.: Itaim, Jardins, Pinheiros…" autocomplete="address-level2" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como posso te ajudar?"></textarea>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+              <p class="form-privacy">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Seus dados são usados exclusivamente para responder seu contato. Não compartilhamos informações com terceiros.
+              </p>
+            </div>
+
+          </form>
+        </div><!-- /contact-form-wrap -->
+
+      </div>
+    </section>
+    <!-- /contato -->
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Marilda Souza</span>
+        <p class="footer-tagline">Consultora Imobiliária</p>
+        <!-- Trocar CRECI -->
+        <p class="footer-creci">CRECI–SP nº 000000 &middot; São Paulo, SP</p>
+      </div>
+      <nav class="footer-nav" aria-label="Links rápidos do rodapé">
+        <ul role="list">
+          <li><a href="#destaques">Destaques</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Marilda Souza. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante fixo -->
+  <!-- Trocar número -->
+  <a
+    href="https://wa.me/5500000000000"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Conversar com Marilda Souza no WhatsApp (abre em nova aba)"
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
