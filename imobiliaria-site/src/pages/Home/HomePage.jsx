@@ -193,12 +193,12 @@ function HomePage() {
         </AboutParagraphs>
 
         <AboutSocialLinks>
-          <SocialLinkButton href="https://wa.me/5541999999999" target="_blank" rel="noreferrer">
+          <SocialLinkButton href="https://wa.me/554184500589" target="_blank" rel="noreferrer">
           <FaWhatsapp/>
             {/* ícone do WhatsApp, mantém o mesmo svg que já existia */}
             WhatsApp
           </SocialLinkButton>
-          <SocialLinkButton href="mailto:marilda@example.com">
+          <SocialLinkButton href="mailto:marysouza510@gmail.com">
             {/* ícone de e-mail, mantém o mesmo svg que já existia */}
             E-mail
           </SocialLinkButton>
@@ -698,23 +698,12 @@ function HomePage() {
           <FinalCtaActions>
             {/* Primary CTA */}
             <FinalCtaPrimaryButton
-              href="https://wa.me/5541999999999"
+              href="https://wa.me/554184500589"
               target="_blank"
               rel="noreferrer"
               aria-label="Falar com Marilda no WhatsApp"
             >
-              <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
-                <path
-                  d="M16 3C9.383 3 4 8.275 4 14.77c0 2.362.726 4.67 2.104 6.64L4.7 28.6l7.48-1.34A12.2 12.2 0 0 0 16 26.54c6.617 0 12-5.275 12-11.77C28 8.275 22.617 3 16 3Z"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                />
-                <path
-                  d="M12.8 11.2c.23-.52.48-.53.71-.54h.61c.2 0 .48.08.73.56.25.48.84 1.66.91 1.78.07.12.12.27.02.48-.1.21-.15.34-.3.52-.15.18-.31.4-.44.54-.15.15-.3.31-.13.6.17.29.77 1.22 1.65 1.98 1.13.98 2.08 1.28 2.37 1.43.29.15.46.13.63-.07.17-.2.72-.81.91-1.09.19-.28.38-.23.63-.14.25.09 1.59.72 1.86.85.27.13.45.2.52.31.07.11.07.65-.16 1.27-.23.62-1.33 1.2-1.84 1.25-.47.05-.89.17-3.02-.61-2.57-.93-4.23-3.18-4.36-3.35-.13-.17-1.04-1.38-1.04-2.64 0-1.26.69-1.88.94-2.14Z"
-                  fill="currentColor"
-                  opacity="0.9"
-                />
-              </svg>
+              <FaWhatsapp/>
               Falar no WhatsApp
             </FinalCtaPrimaryButton>
 
