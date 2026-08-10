@@ -31,3 +31,18 @@ export const imovelBySlugQuery = `
     imagemCapa
   }
 `;
+
+export const imoveisDestaqueQuery = `*[_type == "imovel" && destaque == true] | order(_createdAt desc)[0...3]{
+  _id,
+  titulo,
+  "slug": slug.current,
+  preco,
+  tipoNegocio,
+  bairro,
+  cidade,
+  quartos,
+  banheiros,
+  vagas,
+  area,
+  imagemCapa
+}`;

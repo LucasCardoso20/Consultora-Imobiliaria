@@ -12,6 +12,19 @@ export default defineType({
       type: 'slug',
       options: { source: 'titulo', maxLength: 96 },
     }),
+    defineField({
+  name: 'tipoNegocio',
+  title: 'Tipo de negócio',
+  type: 'string',
+  options: {
+    list: [
+      { title: 'Venda', value: 'venda' },
+      { title: 'Aluguel', value: 'aluguel' },
+    ],
+    layout: 'radio',
+  },
+  initialValue: 'venda',
+}),
     defineField({ name: 'descricao', title: 'Descrição', type: 'text' }),
     defineField({ name: 'preco', title: 'Preço', type: 'number' }),
     defineField({ name: 'cidade', title: 'Cidade', type: 'string' }),

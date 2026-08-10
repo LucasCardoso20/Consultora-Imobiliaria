@@ -1,64 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Mantém o Link do react-router-dom
+import { Link } from 'react-router-dom';
 import {
-  StyledHeader,
-  HeaderContainer,
-  BrandLink,
-  LogoSpan,
-  LogoText,
-  LogoTitle,
-  LogoSubtitle,
-  Nav,
-  NavLink,
-  ActionsContainer,
-  BookCallButton,
-  WhatsAppButton,
-  MobileMenuButton,
-} from './Header.styles'; // Importa todos os Styled Components
+  StyledHeader, HeaderContainer, BrandLink, Mark, BrandText,
+  BrandTitle, BrandSubtitle, Nav, NavItem, NavIndex, NavLabel,
+  ActionsContainer, ContactButton, MobileMenuButton,
+} from './Header.styles';
 
 function Header() {
   return (
     <StyledHeader>
       <HeaderContainer>
-        {/* Brand */}
         <BrandLink to="/">
-                      <LogoTitle>Marilda Souza</LogoTitle>
-
+          <BrandText>
+            <BrandTitle>Marilda Souza</BrandTitle>
+            <BrandSubtitle>Consultoria Imobiliária · Curitiba/PR</BrandSubtitle>
+          </BrandText>
         </BrandLink>
 
-        {/* Nav (desktop) */}
         <Nav>
-          <NavLink href="#services">Services</NavLink>
-          <NavLink href="#listings">Listings</NavLink>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#contact">Contact</NavLink>
+          <NavItem href="#imoveis-morar-investir"><NavIndex>01</NavIndex><NavLabel>Serviços</NavLabel></NavItem>
+          <NavItem href="#featured-properties"><NavIndex>02</NavIndex><NavLabel>Imóveis</NavLabel></NavItem>
+          <NavItem href="#about"><NavIndex>03</NavIndex><NavLabel>Sobre</NavLabel></NavItem>
+          <NavItem href="#contact"><NavIndex>04</NavIndex><NavLabel>Contato</NavLabel></NavItem>
         </Nav>
 
-        {/* Actions */}
         <ActionsContainer>
-          <BookCallButton href="#contact">
-            Book a call
-          </BookCallButton>
-
-          <WhatsAppButton href="#contact">
-            WhatsApp
-          </WhatsAppButton>
-
-          {/* Mobile menu button (visual placeholder) */}
-          <MobileMenuButton type="button" aria-label="Open menu">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M4 7h16M4 12h16M4 17h16"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
+          <ContactButton href="https://wa.me/5541999999999" target="_blank" rel="noreferrer">
+            Falar com a Marilda
+          </ContactButton>
+          <MobileMenuButton type="button" aria-label="Abrir menu">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
             </svg>
           </MobileMenuButton>
         </ActionsContainer>
