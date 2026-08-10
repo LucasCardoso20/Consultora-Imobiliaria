@@ -35,6 +35,7 @@ ServicesSectionDivider,
   PropertiesCtaContainer,
   PropertiesCtaButton
 } from './HomePage.styles';
+import { FaWhatsapp } from 'react-icons/fa';
 
 function HomePage() {
  const [imoveisDestaque, setImoveisDestaque] = useState(null);
@@ -193,6 +194,7 @@ function HomePage() {
 
         <AboutSocialLinks>
           <SocialLinkButton href="https://wa.me/5541999999999" target="_blank" rel="noreferrer">
+          <FaWhatsapp/>
             {/* ícone do WhatsApp, mantém o mesmo svg que já existia */}
             WhatsApp
           </SocialLinkButton>

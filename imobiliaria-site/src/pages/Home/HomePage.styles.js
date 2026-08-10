@@ -419,6 +419,21 @@ export const AboutFigure = styled.figure`
   position: relative;
   overflow: hidden;
   border: 1px solid ${colors.ink[950]}1A;
+  background-color: ${colors.sand[100]};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const AboutImage = styled.img`
+  height: 30rem;
+  width: 100%;
+  object-fit: contain;
+  filter: grayscale(0.1) contrast(1.02);
+
+  @media (min-width: ${breakpoints.sm}) {
+    height: 36rem;
+  }
 `;
 
 export const SocialLinkButton = styled.a`
@@ -444,16 +459,6 @@ export const SocialLinkButton = styled.a`
   svg {
     height: 1rem;
     width: 1rem;
-  }
-`;
-export const AboutImage = styled.img`
-  height: 30rem;
-  width: 100%;
-  object-fit: cover;
-  filter: grayscale(0.1) contrast(1.02);
-
-  @media (min-width: ${breakpoints.sm}) {
-    height: 36rem;
   }
 `;
 

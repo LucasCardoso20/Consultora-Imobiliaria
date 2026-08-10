@@ -6,6 +6,7 @@ import HomePage from './pages/Home/HomePage';
 import { GlowBackdrop, GlowShape } from './App.styles';
 import ImoveisPage from './pages/Imoveis/ImoveisPage';
 import ImovelDetalhePage from './pages/Imoveis/ImovelDetalhePage';
+import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       </main>
 
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

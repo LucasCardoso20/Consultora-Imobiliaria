@@ -154,3 +154,61 @@ export const MobileMenuButton = styled.button`
 
   @media (min-width: ${breakpoints.md}) { display: none; }
 `;
+
+export const MobileNavPanel = styled.nav`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid ${colors.ink[950]}1A;
+  background-color: ${colors.sand[50]};
+  padding: 0.5rem 1.25rem 1.5rem;
+  transform-origin: top;
+  animation: slideDown 0.22s ease-out;
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-8px) scaleY(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scaleY(1);
+    }
+  }
+
+  @media (min-width: ${breakpoints.md}) {
+    display: none;
+  }
+`;
+export const MobileNavItem = styled.a`
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.9rem 0;
+  text-decoration: none;
+  color: ${colors.ink[700]};
+  border-bottom: 1px solid ${colors.ink[950]}14;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+`;
+
+export const MobileContactButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.25rem;
+  border: 1px solid ${colors.ink[950]};
+  background: ${colors.ink[950]};
+  padding: 0.75rem 1.25rem;
+  font-family: ${fonts.mono};
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+`;
